@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Heritage – My Travel Guardian</title>
+    <meta name="description"
+        content="Discover the living heritage of Sambalpur, Odisha — the roots of My Travel Guardian. Explore tribal art, ancient temples, and handloom traditions." />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3E7B78", "secondary": "#1B2430", "accent": "#E6DCCA", "background-light": "#F9F7F2", "background-dark": "#111820"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["'Playfair Display'", "Georgia", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.25rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        "soft": "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
+                        "soft-lg": "0 10px 40px -5px rgba(0, 0, 0, 0.05)"
+                    },
+                    backgroundImage: {
+                        'sambalpuri': "url('data:image/svg+xml,%3Csvg width=\\'60\\' height=\\'60\\' viewBox=\\'0 0 60 60\\' xmlns=\\'http://www.w3.org/2000/svg\\'%3E%3Cg fill=\\'none\\' fill-rule=\\'evenodd\\'%3E%3Cg fill=\\'%233E7B78\\' fill-opacity=\\'0.05\\'%3E%3Cpath d=\\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-background-light font-display text-secondary overflow-x-hidden page-transition">
+
+    <!-- NAV -->
+    <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" alt="My Travel Guardian" class="h-24 w-auto object-contain" />
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="nav-link text-sm font-medium text-secondary/70 hover:text-primary transition-colors"
+                    href="destinations.html">Destinations</a>
+                <a class="nav-link text-sm font-medium text-primary" href="heritage.html">Heritage</a>
+                <a class="nav-link text-sm font-medium text-secondary/70 hover:text-primary transition-colors"
+                    href="journal.html">Journal</a>
+                <a class="nav-link text-sm font-medium text-secondary/70 hover:text-primary transition-colors"
+                    href="contact.html">Contact</a>
+            </div>
+            <a href="plan-trip.html"
+                class="btn plan-trip-btn ripple-btn bg-primary text-white text-sm font-medium py-2.5 px-7 rounded-full shadow-md shadow-primary/20 transition-all duration-300">Plan
+                My Trip</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="pt-20 w-full h-[60vh] min-h-[420px] flex items-end relative overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('odisha_heritage_hero.png');">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 pb-20 fade-in-section is-visible">
+            <span class="text-accent text-xs font-bold uppercase tracking-[0.25em] mb-3 block">Our Roots</span>
+            <h1 class="text-white text-5xl md:text-6xl font-serif leading-tight">The Guardian's Heritage</h1>
+            <p class="text-white/75 text-lg font-light mt-4 max-w-xl">Rooted in Sambalpur, open to the world.</p>
+        </div>
+    </header>
+
+    <!-- INTRO -->
+    <section class="max-w-4xl mx-auto px-6 py-24 text-center fade-in-section">
+        <div class="w-12 h-1 bg-accent mx-auto mb-8"></div>
+        <h2 class="text-3xl md:text-4xl font-serif text-secondary mb-8 leading-snug">Where "Atithi Devo Bhava" is a
+            Sacred Duty</h2>
+        <p class="text-secondary/70 text-lg font-light leading-loose mb-6">Our journey began not in a corporate
+            high-rise, but amidst the rhythmic clatter of handlooms in Sambalpur, Odisha. We carry forward the timeless
+            philosophy that the guest is god — and every journey deserves the devotion of a guardian.</p>
+        <p class="text-secondary/70 text-lg font-light leading-loose">My Travel Guardian was born from this cultural
+            richness. Every bespoke itinerary we craft is infused with the warmth, precision, and care inherited from
+            centuries of Odishan hospitality.</p>
+    </section>
+
+    <!-- HERITAGE PILLARS -->
+    <section class="bg-accent/20 py-24 px-6 fade-in-section">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-primary text-xs font-bold uppercase tracking-widest">Living Traditions</span>
+                <h2 class="text-3xl md:text-4xl font-serif text-secondary mt-4">The Pillars of Our Heritage</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-soft border border-slate-100 text-center">
+                    <div
+                        class="size-16 rounded-full border-2 border-primary/20 bg-primary/5 flex items-center justify-center mx-auto mb-6">
+                        <span class="material-symbols-outlined text-3xl text-primary">weave</span>
+                    </div>
+                    <h3 class="text-xl font-serif text-secondary mb-3">Sambalpuri Handlooms</h3>
+                    <p class="text-secondary/60 text-sm font-light leading-relaxed">The iconic ikkat weave of Sambalpur
+                        – a GI-tagged textile tradition that speaks of identity, art, and meticulous craftsmanship
+                        passed across generations.</p>
+                    <a href="plan-trip.html"
+                        class="btn ripple-btn mt-6 inline-block text-primary border border-primary/30 hover:bg-primary hover:text-white text-xs px-6 py-2.5 rounded-full">Visit
+                        Weavers</a>
+                </div>
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-soft border border-slate-100 text-center">
+                    <div
+                        class="size-16 rounded-full border-2 border-primary/20 bg-primary/5 flex items-center justify-center mx-auto mb-6">
+                        <span class="material-symbols-outlined text-3xl text-primary">temple_hindu</span>
+                    </div>
+                    <h3 class="text-xl font-serif text-secondary mb-3">Ancient Temples</h3>
+                    <p class="text-secondary/60 text-sm font-light leading-relaxed">From the majestic Huma Temple on the
+                        Mahanadi river to the Leaning Temple and Samaleswari Devi, Odisha's spiritual landscape is
+                        humbling and breathtaking.</p>
+                    <a href="plan-trip.html"
+                        class="btn ripple-btn mt-6 inline-block text-primary border border-primary/30 hover:bg-primary hover:text-white text-xs px-6 py-2.5 rounded-full">Temple
+                        Trail</a>
+                </div>
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-soft border border-slate-100 text-center">
+                    <div
+                        class="size-16 rounded-full border-2 border-primary/20 bg-primary/5 flex items-center justify-center mx-auto mb-6">
+                        <span class="material-symbols-outlined text-3xl text-primary">palette</span>
+                    </div>
+                    <h3 class="text-xl font-serif text-secondary mb-3">Tribal Art &amp; Culture</h3>
+                    <p class="text-secondary/60 text-sm font-light leading-relaxed">Odisha is home to over 62 tribes.
+                        Their vibrant dances, pattachitra paintings, and handcrafted masks are living artworks of an
+                        ancient civilization.</p>
+                    <a href="plan-trip.html"
+                        class="btn ripple-btn mt-6 inline-block text-primary border border-primary/30 hover:bg-primary hover:text-white text-xs px-6 py-2.5 rounded-full">Cultural
+                        Trails</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FESTIVAL SECTION -->
+    <section class="py-24 px-6 max-w-7xl mx-auto fade-in-section">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="rounded-2xl overflow-hidden aspect-[4/3] img-zoom shadow-soft">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrJkFrxzaBMJjsYQhh-oyrv_TA7sYa-C2mmAAvb5n8gi0YwriVRvaPftQZCSt8IC8bEQbN5ypTN4NyzyokEFv1BtnBKr-z3-0AVYDAZPextf2uJlnEkGG31H7DpI2XqWftDgncn43GMW2fjQJ9ZCho4eVqXarXtQjE9IXnaKS44ljUIidClVxqLBPHTKN_WhtyncqG19box7UK3Ft-bmT-NaqfFw69rZbrcwFV2qL8e_XbkikqfgnknblJeplRfIvM8h3y_eXS9Jdl"
+                    alt="Festival" class="w-full h-full object-cover" />
+            </div>
+            <div>
+                <span class="text-primary text-xs font-bold uppercase tracking-widest">Celebrations</span>
+                <h2 class="text-3xl md:text-4xl font-serif text-secondary mt-4 mb-6 leading-tight">Experience the
+                    Festivals of Odisha</h2>
+                <p class="text-secondary/70 text-lg font-light leading-loose mb-6">From the world-famous Rath Yatra of
+                    Puri to the vibrant Sambalpur Mahotsav, Odisha's festivals are a sensory explosion of color, music,
+                    and devotion. Our heritage tours are timed with these celebrations for an unforgettable experience.
+                </p>
+                <ul class="space-y-4">
+                    <li class="flex gap-3 items-start"><span
+                            class="material-symbols-outlined text-primary mt-0.5">event</span>
+                        <div><strong class="text-secondary">Rath Yatra</strong> – <span
+                                class="text-secondary/60 text-sm">June/July · Puri</span></div>
+                    </li>
+                    <li class="flex gap-3 items-start"><span
+                            class="material-symbols-outlined text-primary mt-0.5">event</span>
+                        <div><strong class="text-secondary">Sambalpur Mahotsav</strong> – <span
+                                class="text-secondary/60 text-sm">December · Sambalpur</span></div>
+                    </li>
+                    <li class="flex gap-3 items-start"><span
+                            class="material-symbols-outlined text-primary mt-0.5">event</span>
+                        <div><strong class="text-secondary">Konark Dance Festival</strong> – <span
+                                class="text-secondary/60 text-sm">December · Konark</span></div>
+                    </li>
+                    <li class="flex gap-3 items-start"><span
+                            class="material-symbols-outlined text-primary mt-0.5">event</span>
+                        <div><strong class="text-secondary">Adivasi Mela</strong> – <span
+                                class="text-secondary/60 text-sm">January · Bhubaneswar</span></div>
+                    </li>
+                </ul>
+                <a href="plan-trip.html"
+                    class="btn ripple-btn mt-10 inline-flex bg-primary text-white py-3 px-8 rounded-full shadow-md shadow-primary/20 text-sm">Plan
+                    a Festival Trip</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-secondary py-20 text-center px-6">
+        <h2 class="text-3xl md:text-4xl font-serif text-white mb-6">Experience Odisha with a Guardian</h2>
+        <p class="text-slate-400 font-light mb-10">Let us take you beyond the tourist trail into the heart of living
+            culture.</p>
+        <a href="plan-trip.html"
+            class="btn ripple-btn bg-primary text-white py-4 px-12 rounded-full text-sm tracking-widest uppercase shadow-lg shadow-primary/20 hover:bg-white hover:text-secondary">Start
+            Planning</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-secondary text-white pt-24 pb-12 relative overflow-hidden">
+        <div
+            class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-secondary via-primary to-secondary opacity-50">
+        </div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+                <div class="flex flex-col gap-6">
+                    <a href="index.html" class="flex items-center">
+                        <img src="logo.png" alt="My Travel Guardian"
+                            class="h-10 w-auto object-contain brightness-0 invert opacity-80" />
+                    </a>
+                    <p class="text-slate-400 text-sm leading-relaxed font-light">
+                        Crafting bespoke journeys for the modern explorer. Rooted in heritage, delivered with global
+                        luxury standards.
+                    </p>
+                    <div class="text-slate-400 text-sm font-light mt-2 space-y-3 border-l-2 border-primary/40 pl-4">
+                        <p class="flex items-start gap-3"><span
+                                class="material-symbols-outlined text-[18px] text-accent mt-0.5">location_on</span>
+                            <span class="leading-relaxed">House no 2, 5, Lane 2, Poddar Colony, Khetrajpur, Sambalpur,
+                                Odisha 768003<br><i class="text-white/40 text-xs">Near Durga Mangalam</i></span>
+                        </p>
+                        <p class="flex items-center gap-3"><span
+                                class="material-symbols-outlined text-[18px] text-accent">schedule</span> <span>Mon -
+                                Sun, 10 AM - 8 PM</span></p>
+                    </div>
+                    <div class="flex gap-4">
+                        <a class="text-white/40 hover:text-primary transition-colors" href="https://facebook.com"
+                            target="_blank"><span class="material-symbols-outlined">public</span></a>
+                        <a class="text-white/40 hover:text-primary transition-colors" href="https://instagram.com"
+                            target="_blank"><span class="material-symbols-outlined">photo_camera</span></a>
+                        <a class="text-white/40 hover:text-primary transition-colors"
+                            href="mailto:hello@mytravelguardian.com"><span
+                                class="material-symbols-outlined">mail</span></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-serif text-lg mb-8 text-accent">Company</h3>
+                    <ul class="space-y-4 text-sm text-slate-400 font-light">
+                        <li><a class="hover:text-white transition-colors" href="about.html">Our Story</a></li>
+                        <li><a class="hover:text-white transition-colors" href="about.html#team">The Team</a></li>
+                        <li><a class="hover:text-white transition-colors" href="about.html">Careers</a></li>
+                        <li><a class="hover:text-white transition-colors" href="about.html">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-serif text-lg mb-8 text-accent">Support</h3>
+                    <ul class="space-y-4 text-sm text-slate-400 font-light">
+                        <li><a class="hover:text-white transition-colors" href="plan-trip.html">Contact Guardian</a>
+                        </li>
+                        <li><a class="hover:text-white transition-colors" href="#">Terms of Service</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-serif text-lg mb-8 text-accent">Newsletter</h3>
+                    <p class="text-slate-400 text-sm mb-6 font-light">Subscribe for heritage stories and travel
+                        inspiration.</p>
+                    <form class="flex flex-col gap-4">
+                        <input
+                            class="bg-white/5 border border-white/10 rounded-none px-4 py-3 text-sm text-white focus:outline-none focus:border-primary transition-colors"
+                            placeholder="Email address" type="email" />
+                        <button
+                            class="btn ripple-btn bg-primary hover:bg-white hover:text-secondary text-white text-sm font-medium py-3 px-6 rounded-none transition-all uppercase tracking-widest"
+                            type="button"
+                            onclick="this.closest('form').dispatchEvent(new Event('submit',{bubbles:true,cancelable:true}))">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-slate-500 text-xs tracking-wide">© 2023 My Travel Guardian. All rights reserved.</p>
+                <div class="flex gap-8 text-xs text-slate-500 uppercase tracking-widest">
+                    <a class="hover:text-white transition-colors" href="#">Privacy</a>
+                    <a class="hover:text-white transition-colors" href="#">Terms</a>
+                    <a class="hover:text-white transition-colors" href="destinations.html">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast"><span class="material-symbols-outlined text-primary text-lg">check_circle</span><span
+            id="toast-msg">Done!</span></div>
+    <script src="app.js"></script>
+</body>
+
+</html>

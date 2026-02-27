@@ -1,0 +1,312 @@
+/* =====================================================
+   MY TRAVEL GUARDIAN — Shared Styles & Animations
+   ===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* ── Scrollbar ── */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ── Fade-In Sections ── */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Ripple Effect ── */
+.ripple-btn {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.ripple-btn .ripple-wave {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(0);
+  animation: ripple-anim 0.65s linear;
+  pointer-events: none;
+}
+
+@keyframes ripple-anim {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* ── Button Base Transitions ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: transform 0.2s cubic-bezier(.34, 1.56, .64, 1),
+    box-shadow 0.25s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.btn:active {
+  transform: translateY(0px) scale(0.97);
+  box-shadow: none;
+}
+
+/* ── Nav link underline slide ── */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #3E7B78;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ── Card hover lift ── */
+.card-hover {
+  transition: transform 0.35s cubic-bezier(.34, 1.56, .64, 1),
+    box-shadow 0.35s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* ── Image zoom wrapper ── */
+.img-zoom img {
+  transition: transform 0.8s cubic-bezier(.25, .46, .45, .94);
+}
+
+.img-zoom:hover img {
+  transform: scale(1.06);
+}
+
+/* ── Floating label input ── */
+.float-label-wrap {
+  position: relative;
+}
+
+.float-label-wrap input,
+.float-label-wrap textarea,
+.float-label-wrap select {
+  width: 100%;
+  padding: 1.25rem 1rem 0.5rem;
+  border: 1.5px solid #d1d5db;
+  border-radius: 0.75rem;
+  background: #fff;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  outline: none;
+}
+
+.float-label-wrap input:focus,
+.float-label-wrap textarea:focus,
+.float-label-wrap select:focus {
+  border-color: #3E7B78;
+  box-shadow: 0 0 0 3px rgba(62, 123, 120, 0.15);
+}
+
+.float-label-wrap label {
+  position: absolute;
+  top: 0.9rem;
+  left: 1rem;
+  font-size: 0.95rem;
+  color: #9ca3af;
+  pointer-events: none;
+  transition: all 0.25s ease;
+}
+
+.float-label-wrap input:focus~label,
+.float-label-wrap input:not(:placeholder-shown)~label,
+.float-label-wrap textarea:focus~label,
+.float-label-wrap textarea:not(:placeholder-shown)~label,
+.float-label-wrap select:focus~label {
+  top: 0.3rem;
+  font-size: 0.7rem;
+  color: #3E7B78;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ── Page loader / transition ── */
+.page-transition {
+  animation: pageIn 0.45s ease-out both;
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Pulse badge ── */
+.pulse-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #3E7B78;
+  display: inline-block;
+  animation: pulse-dot 1.6s infinite;
+}
+
+@keyframes pulse-dot {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(62, 123, 120, 0.4);
+  }
+
+  60% {
+    box-shadow: 0 0 0 8px rgba(62, 123, 120, 0);
+  }
+}
+
+/* ── Tag chip ── */
+.chip {
+  display: inline-block;
+  padding: 0.25rem 0.9rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(62, 123, 120, 0.1);
+  color: #3E7B78;
+  transition: background 0.25s, color 0.25s, transform 0.2s;
+}
+
+.chip:hover {
+  background: #3E7B78;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* ── Toast notification ── */
+#toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: #1B2430;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  font-size: 0.9rem;
+  z-index: 9999;
+  transform: translateY(6rem);
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(.34, 1.56, .64, 1), opacity 0.3s;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+#toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ── Hero gradient overlay ── */
+.hero-overlay {
+  background: linear-gradient(to top, rgba(27, 36, 48, 0.8) 0%, rgba(27, 36, 48, 0.2) 50%, transparent 100%);
+}
+
+/* ── Subtle grid pattern bg ── */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(62, 123, 120, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(62, 123, 120, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* ── Nav Transparent (hero top) ── */
+nav.nav-transparent {
+  background: transparent !important;
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+nav.nav-transparent .nav-link {
+  color: #E6C27A !important;
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-style: italic !important;
+  font-size: 1.15rem !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.02em;
+}
+
+nav.nav-transparent .nav-link::after {
+  background: #E6C27A;
+}
+
+nav.nav-transparent .plan-trip-btn {
+  border-color: #E6C27A !important;
+  color: #fff !important;
+  background: rgba(230, 194, 122, 0.6) !important;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+nav.nav-transparent .plan-trip-btn:hover {
+  background: #E6C27A !important;
+  color: #1B2430 !important;
+}
+
+/* ── Nav Scrolled (blurred white) ── */
+nav.nav-scrolled {
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid rgba(27, 36, 48, 0.06) !important;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06) !important;
+}
+
+nav.nav-scrolled .nav-link {
+  color: rgba(27, 36, 48, 0.7) !important;
+  font-style: normal !important;
+  text-shadow: none !important;
+}

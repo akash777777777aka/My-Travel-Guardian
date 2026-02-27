@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Our Story – My Travel Guardian</title>
+    <meta name="description"
+        content="Learn about the story, values, and the team behind My Travel Guardian — born in Sambalpur, built for the world." />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3E7B78", "secondary": "#1B2430", "accent": "#E6DCCA", "background-light": "#F9F7F2", "background-dark": "#111820"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["'Playfair Display'", "Georgia", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.25rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        "soft": "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
+                        "soft-lg": "0 10px 40px -5px rgba(0, 0, 0, 0.05)"
+                    },
+                    backgroundImage: {
+                        'sambalpuri': "url('data:image/svg+xml,%3Csvg width=\\'60\\' height=\\'60\\' viewBox=\\'0 0 60 60\\' xmlns=\\'http://www.w3.org/2000/svg\\'%3E%3Cg fill=\\'none\\' fill-rule=\\'evenodd\\'%3E%3Cg fill=\\'%233E7B78\\' fill-opacity=\\'0.05\\'%3E%3Cpath d=\\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-background-light font-display text-secondary overflow-x-hidden page-transition">
+
+    <!-- NAV -->
+    <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" alt="My Travel Guardian" class="h-24 w-auto object-contain" />
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="nav-link text-sm font-medium text-secondary/70 hover:text-primary transition-colors"
+                    href="destinations.html">Destinations</a>
+                <a class="nav-link text-sm font-medium text-secondary/70 hover:text-primary transition-colors"
+                    href="heritage.html">Heritage</a>
+                <a class="nav-link text-sm font-medium text-secondary/70 hover:text-primary transition-colors"
+                    href="journal.html">Journal</a>
+                <a class="nav-link text-sm font-medium text-secondary/70 hover:text-primary transition-colors"
+                    href="contact.html">Contact</a>
+            </div>
+            <a href="plan-trip.html"
+                class="btn plan-trip-btn ripple-btn bg-primary text-white text-sm font-medium py-2.5 px-7 rounded-full shadow-md shadow-primary/20 transition-all duration-300">Plan
+                My Trip</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="pt-20 relative w-full min-h-[55vh] flex items-end overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo2V3IuajJ5NgXipBW82K3M2biZfsZJxl9uhTWwPIsOJjpWYbVe6xhPsVYAApwN9SnavC7iHipzqzFXaKJk6PGsojw71pPf4BFLq3JerqwvNGsnpxsXeqKEYlj57mDr75O9ALJ4CPxPBy7sEZB6njN2CkvecwoW-MIJmv7iUJYK6qrKUn7stw2f7pTOIifiledF1qFUK8f569VKxyi1P40LUXddV9rzd5mEqmBNZJCpQei64CUmHq-vPmTcFYP7xZJbG8BOsbOEx0k"
+                class="w-full h-full object-cover" alt="Sambalpur" />
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 pb-20 fade-in-section is-visible">
+            <span class="text-accent text-xs font-bold uppercase tracking-[0.25em] mb-3 block">Who We Are</span>
+            <h1 class="text-white text-5xl md:text-6xl font-serif leading-tight">Our Story</h1>
+        </div>
+    </header>
+
+    <!-- FOUNDER STORY -->
+    <section class="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-20 items-center fade-in-section">
+        <div class="aspect-[4/5] rounded-t-full rounded-b-3xl overflow-hidden shadow-soft-lg img-zoom">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtkIwC6xHmZkpE61_8Y8LaJr9SkLd7fY7r8EXCRPa0w3Bg3mnY8bzMj8xwBExUGk6lNeDN3-pwCl2IiIxd_i4KDPFsJM9VPopaTayDZtnUw_ydCg0DEIlJP1Pnx2wTKJiScLFJLI8kl8mHVjjBiSAliRTmJ1djO2LoE2xjHb8lNMUyOd144t3tdwK7eyNegz6wPljgyFykrDwUQSBcGPqEc1YNKmomgi1wQ--PDzOj0mDi0VKVuCkauH8bjWvGvvUBqlMqZxlt2c8r"
+                alt="Founder"
+                class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000" />
+        </div>
+        <div>
+            <span class="text-primary font-medium uppercase tracking-[0.2em] text-xs mb-4 block">The Guardian's
+                Heritage</span>
+            <h2 class="text-4xl md:text-5xl font-serif text-secondary mb-6 leading-tight">Rooted in Sambalpur,<br />Open
+                to the World.</h2>
+            <div class="w-16 h-1 bg-accent mb-8"></div>
+            <p class="text-secondary/70 text-lg mb-6 leading-loose font-light">Our journey began not in a corporate
+                high-rise, but amidst the rhythmic clatter of handlooms in Sambalpur, Odisha. Here, <em>"Atithi Devo
+                    Bhava"</em> — The Guest is God — isn't just a phrase. It's a sacred duty.</p>
+            <p class="text-secondary/70 text-lg mb-8 leading-loose font-light">I founded My Travel Guardian to bring
+                that same profound sense of care and protection to global luxury travel. Whether you're navigating the
+                souks of Marrakech or the fjords of Norway, we watch over your journey with the warmth of an old friend
+                and the precision of a guardian.</p>
+            <div class="flex gap-4 items-center">
+                <div class="w-14 h-14 rounded-full overflow-hidden border-2 border-primary/20">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtkIwC6xHmZkpE61_8Y8LaJr9SkLd7fY7r8EXCRPa0w3Bg3mnY8bzMj8xwBExUGk6lNeDN3-pwCl2IiIxd_i4KDPFsJM9VPopaTayDZtnUw_ydCg0DEIlJP1Pnx2wTKJiScLFJLI8kl8mHVjjBiSAliRTmJ1djO2LoE2xjHb8lNMUyOd144t3tdwK7eyNegz6wPljgyFykrDwUQSBcGPqEc1YNKmomgi1wQ--PDzOj0mDi0VKVuCkauH8bjWvGvvUBqlMqZxlt2c8r"
+                        alt="Founder" class="w-full h-full object-cover" />
+                </div>
+                <div>
+                    <p class="font-bold text-secondary">Priya Mohanty</p>
+                    <p class="text-secondary/50 text-sm">Founder &amp; Chief Guardian</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="bg-accent/15 py-24 px-6 fade-in-section">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif text-secondary">Our Values</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-soft border border-slate-100 text-center">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-4 block">shield</span>
+                    <h3 class="font-serif text-secondary mb-2">Protection</h3>
+                    <p class="text-secondary/60 text-sm font-light">We guard every detail of your journey — before,
+                        during, and after.</p>
+                </div>
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-soft border border-slate-100 text-center">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-4 block">handshake</span>
+                    <h3 class="font-serif text-secondary mb-2">Integrity</h3>
+                    <p class="text-secondary/60 text-sm font-light">Transparent pricing, honest advice, and no hidden
+                        agendas. Ever.</p>
+                </div>
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-soft border border-slate-100 text-center">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-4 block">auto_awesome</span>
+                    <h3 class="font-serif text-secondary mb-2">Excellence</h3>
+                    <p class="text-secondary/60 text-sm font-light">From the finest hotels to the most remote tented
+                        camps, only the best.</p>
+                </div>
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-soft border border-slate-100 text-center">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-4 block">diversity_3</span>
+                    <h3 class="font-serif text-secondary mb-2">Heritage</h3>
+                    <p class="text-secondary/60 text-sm font-light">We celebrate culture and support the communities we
+                        travel to.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="py-24 px-6 fade-in-section">
+        <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
+            <div>
+                <p class="text-4xl md:text-5xl font-serif text-primary counter" data-target="500">0</p>
+                <p class="text-secondary/50 text-sm uppercase tracking-wide mt-2">Trips Curated</p>
+            </div>
+            <div>
+                <p class="text-4xl md:text-5xl font-serif text-primary counter" data-target="42">0</p>
+                <p class="text-secondary/50 text-sm uppercase tracking-wide mt-2">Countries Covered</p>
+            </div>
+            <div>
+                <p class="text-4xl md:text-5xl font-serif text-primary counter" data-target="98">0</p>
+                <p class="text-secondary/50 text-sm uppercase tracking-wide mt-2">% Client Satisfaction</p>
+            </div>
+            <div>
+                <p class="text-4xl md:text-5xl font-serif text-primary counter" data-target="7">0</p>
+                <p class="text-secondary/50 text-sm uppercase tracking-wide mt-2">Years of Excellence</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" class="bg-white py-24 px-6 fade-in-section">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-primary text-xs font-bold uppercase tracking-widest">The Guardians</span>
+                <h2 class="text-3xl md:text-4xl font-serif text-secondary mt-3">Meet the Team</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="card-hover text-center group">
+                    <div class="size-32 mx-auto rounded-full overflow-hidden mb-5 border-2 border-primary/10 img-zoom">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsySS3PcM9sOp8FqlWtcp48Wo3xsp5fd2DQD_4JQNLsTC4K2sUbbn4t0A-LOciEa0MDavLzvrtzeg-QhmQ7bDeD3qzzN4l-m87MWBGc4LlRusaXjTOQS_3Yik8Jqsdnfb1IGF6z7LO0Nr75YxoWt69k1Ap6VE4Hw48aC-2MvF1Pa2ikTvY0UiR4uq2RwnnmLOActMFAr4LDLafbhKrHGRZMFfyyxWrGUJisYW8K6qtUe7buXOSO6YgF-9P4DyGX1XJr9keFhgLPbi9"
+                            alt="Priya"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
+                    </div>
+                    <h3 class="font-serif text-secondary text-xl mb-1">Priya Mohanty</h3>
+                    <p class="text-primary text-xs uppercase tracking-widest mb-3">Founder &amp; Chief Guardian</p>
+                    <p class="text-secondary/60 text-sm font-light">12 years in luxury travel. Born in Sambalpur,
+                        trained in Geneva.</p>
+                </div>
+                <div class="card-hover text-center group">
+                    <div class="size-32 mx-auto rounded-full overflow-hidden mb-5 border-2 border-primary/10 img-zoom">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtkIwC6xHmZkpE61_8Y8LaJr9SkLd7fY7r8EXCRPa0w3Bg3mnY8bzMj8xwBExUGk6lNeDN3-pwCl2IiIxd_i4KDPFsJM9VPopaTayDZtnUw_ydCg0DEIlJP1Pnx2wTKJiScLFJLI8kl8mHVjjBiSAliRTmJ1djO2LoE2xjHb8lNMUyOd144t3tdwK7eyNegz6wPljgyFykrDwUQSBcGPqEc1YNKmomgi1wQ--PDzOj0mDi0VKVuCkauH8bjWvGvvUBqlMqZxlt2c8r"
+                            alt="Arjun"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
+                    </div>
+                    <h3 class="font-serif text-secondary text-xl mb-1">Arjun Sen</h3>
+                    <p class="text-primary text-xs uppercase tracking-widest mb-3">Head of Destinations</p>
+                    <p class="text-secondary/60 text-sm font-light">Visited 85 countries. Expert in adventure and
+                        cultural immersion travel.</p>
+                </div>
+                <div class="card-hover text-center group">
+                    <div class="size-32 mx-auto rounded-full overflow-hidden mb-5 border-2 border-primary/10 img-zoom">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE2oMpxDvPZJzLta5Zv1y7RlBd_JVm95hnGdJpgNBcKFnAkViEiA4DPs_snoumki1yBXyvvXJlWhzgd17e4_IM6asObdwGhp7q3TcZF1uCxKbjRXy5acvQCM6DqbEfYxy0L9bKWT21b4k4F4KxbCZ8jyKTNc44v1BZ0RZOgbr6HtDMh9KdnwqxSa8DMnjG9TkCniRlOFiT86Q3OMqUPlipDwl0NPVP1WPS9Q-XFnXn6w97VIvT9CLFzs-W0an7ydnGs5oXeS8lobIp"
+                            alt="Elena"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
+                    </div>
+                    <h3 class="font-serif text-secondary text-xl mb-1">Neha Patra</h3>
+                    <p class="text-primary text-xs uppercase tracking-widest mb-3">Client Experience Lead</p>
+                    <p class="text-secondary/60 text-sm font-light">Luxury concierge specialist. Obsessed with the
+                        details that make travel magical.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-secondary py-24 text-center px-6">
+        <h2 class="text-3xl md:text-5xl font-serif text-white mb-6">Ready to be watched over?</h2>
+        <p class="text-slate-400 text-lg mb-10 font-light">Start planning your next journey with a guardian by your
+            side.</p>
+        <a href="plan-trip.html"
+            class="btn ripple-btn bg-primary text-white py-4 px-12 rounded-full text-sm tracking-widest uppercase shadow-lg shadow-primary/20 hover:bg-white hover:text-secondary">Plan
+            My Trip</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-secondary text-white pt-24 pb-12 relative overflow-hidden">
+        <div
+            class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-secondary via-primary to-secondary opacity-50">
+        </div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+                <div class="flex flex-col gap-6">
+                    <a href="index.html" class="flex items-center">
+                        <img src="logo.png" alt="My Travel Guardian"
+                            class="h-10 w-auto object-contain brightness-0 invert opacity-80" />
+                    </a>
+                    <p class="text-slate-400 text-sm leading-relaxed font-light">
+                        Crafting bespoke journeys for the modern explorer. Rooted in heritage, delivered with global
+                        luxury standards.
+                    </p>
+                    <div class="text-slate-400 text-sm font-light mt-2 space-y-3 border-l-2 border-primary/40 pl-4">
+                        <p class="flex items-start gap-3"><span
+                                class="material-symbols-outlined text-[18px] text-accent mt-0.5">location_on</span>
+                            <span class="leading-relaxed">House no 2, 5, Lane 2, Poddar Colony, Khetrajpur, Sambalpur,
+                                Odisha 768003<br><i class="text-white/40 text-xs">Near Durga Mangalam</i></span>
+                        </p>
+                        <p class="flex items-center gap-3"><span
+                                class="material-symbols-outlined text-[18px] text-accent">schedule</span> <span>Mon -
+                                Sun, 10 AM - 8 PM</span></p>
+                    </div>
+                    <div class="flex gap-4">
+                        <a class="text-white/40 hover:text-primary transition-colors" href="https://facebook.com"
+                            target="_blank"><span class="material-symbols-outlined">public</span></a>
+                        <a class="text-white/40 hover:text-primary transition-colors" href="https://instagram.com"
+                            target="_blank"><span class="material-symbols-outlined">photo_camera</span></a>
+                        <a class="text-white/40 hover:text-primary transition-colors"
+                            href="mailto:hello@mytravelguardian.com"><span
+                                class="material-symbols-outlined">mail</span></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-serif text-lg mb-8 text-accent">Company</h3>
+                    <ul class="space-y-4 text-sm text-slate-400 font-light">
+                        <li><a class="hover:text-white transition-colors" href="about.html">Our Story</a></li>
+                        <li><a class="hover:text-white transition-colors" href="about.html#team">The Team</a></li>
+                        <li><a class="hover:text-white transition-colors" href="about.html">Careers</a></li>
+                        <li><a class="hover:text-white transition-colors" href="about.html">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-serif text-lg mb-8 text-accent">Support</h3>
+                    <ul class="space-y-4 text-sm text-slate-400 font-light">
+                        <li><a class="hover:text-white transition-colors" href="plan-trip.html">Contact Guardian</a>
+                        </li>
+                        <li><a class="hover:text-white transition-colors" href="#">Terms of Service</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-serif text-lg mb-8 text-accent">Newsletter</h3>
+                    <p class="text-slate-400 text-sm mb-6 font-light">Subscribe for heritage stories and travel
+                        inspiration.</p>
+                    <form class="flex flex-col gap-4">
+                        <input
+                            class="bg-white/5 border border-white/10 rounded-none px-4 py-3 text-sm text-white focus:outline-none focus:border-primary transition-colors"
+                            placeholder="Email address" type="email" />
+                        <button
+                            class="btn ripple-btn bg-primary hover:bg-white hover:text-secondary text-white text-sm font-medium py-3 px-6 rounded-none transition-all uppercase tracking-widest"
+                            type="button"
+                            onclick="this.closest('form').dispatchEvent(new Event('submit',{bubbles:true,cancelable:true}))">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-slate-500 text-xs tracking-wide">© 2023 My Travel Guardian. All rights reserved.</p>
+                <div class="flex gap-8 text-xs text-slate-500 uppercase tracking-widest">
+                    <a class="hover:text-white transition-colors" href="#">Privacy</a>
+                    <a class="hover:text-white transition-colors" href="#">Terms</a>
+                    <a class="hover:text-white transition-colors" href="destinations.html">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast"><span class="material-symbols-outlined text-primary text-lg">check_circle</span><span
+            id="toast-msg">Done!</span></div>
+    <script src="app.js"></script>
+    <script>
+        // Animated counters
+        const counters = document.querySelectorAll('.counter');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    const el = e.target, target = +el.dataset.target, dur = 1800;
+                    let start = null;
+                    function step(ts) {
+                        if (!start) start = ts;
+                        const pct = Math.min((ts - start) / dur, 1);
+                        el.textContent = Math.floor(pct * target) + (target === 98 ? '%' : '+');
+                        if (pct < 1) requestAnimationFrame(step);
+                    }
+                    requestAnimationFrame(step);
+                    observer.unobserve(el);
+                }
+            });
+        }, { threshold: 0.3 });
+        counters.forEach(c => observer.observe(c));
+    </script>
+</body>
+
+</html>

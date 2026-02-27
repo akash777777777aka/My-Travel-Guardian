@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Destinations – My Travel Guardian</title>
+    <meta name="description"
+        content="Explore curated luxury destinations handpicked by My Travel Guardian. Each destination is selected for its soul, story, and unmatched beauty." />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3E7B78", "secondary": "#1B2430", "accent": "#E6DCCA", "background-light": "#F9F7F2", "background-dark": "#111820"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["'Playfair Display'", "Georgia", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.25rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        "soft": "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
+                        "soft-lg": "0 10px 40px -5px rgba(0, 0, 0, 0.05)"
+                    },
+                    backgroundImage: {
+                        'sambalpuri': "url('data:image/svg+xml,%3Csvg width=\\'60\\' height=\\'60\\' viewBox=\\'0 0 60 60\\' xmlns=\\'http://www.w3.org/2000/svg\\'%3E%3Cg fill=\\'none\\' fill-rule=\\'evenodd\\'%3E%3Cg fill=\\'%233E7B78\\' fill-opacity=\\'0.05\\'%3E%3Cpath d=\\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-background-light font-display text-secondary overflow-x-hidden page-transition">
+
+    <!-- NAV -->
+    <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" alt="My Travel Guardian" class="h-24 w-auto object-contain" />
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="nav-link text-sm font-medium text-primary" href="destinations.html">Destinations</a>
+                <a class="nav-link text-sm font-medium text-secondary/70 hover:text-primary transition-colors"
+                    href="heritage.html">Heritage</a>
+                <a class="nav-link text-sm font-medium text-secondary/70 hover:text-primary transition-colors"
+                    href="journal.html">Journal</a>
+                <a class="nav-link text-sm font-medium text-secondary/70 hover:text-primary transition-colors"
+                    href="contact.html">Contact</a>
+            </div>
+            <a href="plan-trip.html"
+                class="btn plan-trip-btn ripple-btn bg-primary text-white text-sm font-medium py-2.5 px-7 rounded-full shadow-md shadow-primary/20 transition-all duration-300">Plan
+                My Trip</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="pt-20 relative w-full h-[55vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center"
+            style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuC9IWjnlw3i0ED8RbDNUb2ihvleHPqcWyTHj51-23ov1EL6dlJRE1xTwvvRdWzIg6vRZf3pOInNagahhhzvowS07uJ-r16qGwluSiV16szIO2T6raiISIE57EX_iIZ02q1RVcXHoVSviNlWC_fpgDNkotpSRNHpWNsOn8Xx5YBn1xGrFKBFEMMqW2JiwWEHxYG8xoxVq1W1qItWI1I86IX-x4bpLebZto348N6QqSVQZ-mDP6If9ZMr7JffNSrmdK9-o3JG1nEmTypy');">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        <div class="relative z-10 text-center px-6 fade-in-section is-visible">
+            <span class="text-accent text-xs font-bold uppercase tracking-[0.25em]">Handpicked for you</span>
+            <h1 class="text-white text-5xl md:text-6xl font-serif mt-4 mb-4">Curated Horizons</h1>
+            <p class="text-white/80 text-lg font-light max-w-xl mx-auto">Destinations selected for their soul and story.
+            </p>
+        </div>
+    </header>
+
+    <!-- FILTERS -->
+    <section class="max-w-7xl mx-auto px-6 py-12 fade-in-section">
+        <div class="flex flex-wrap gap-3 justify-center">
+            <button onclick="filterCards('all')" data-filter="all" class="chip active-chip btn ripple-btn"
+                id="filter-all">All</button>
+            <button onclick="filterCards('europe')" data-filter="europe" class="chip btn ripple-btn">Europe</button>
+            <button onclick="filterCards('asia')" data-filter="asia" class="chip btn ripple-btn">Asia</button>
+            <button onclick="filterCards('africa')" data-filter="africa" class="chip btn ripple-btn">Africa</button>
+            <button onclick="filterCards('ocean')" data-filter="ocean" class="chip btn ripple-btn">Oceans &
+                Islands</button>
+            <button onclick="filterCards('america')" data-filter="america" class="chip btn ripple-btn">Americas</button>
+            <button onclick="filterCards('india')" data-filter="india" class="chip btn ripple-btn">India</button>
+        </div>
+    </section>
+
+    <!-- DESTINATION CARDS -->
+    <section class="max-w-7xl mx-auto px-6 pb-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" id="destinations-grid">
+
+            <!-- Santorini -->
+            <div data-cat="europe"
+                class="dest-card card-hover group cursor-pointer rounded-2xl overflow-hidden bg-white shadow-soft border border-slate-100">
+                <div class="aspect-[4/3] overflow-hidden img-zoom">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9IWjnlw3i0ED8RbDNUb2ihvleHPqcWyTHj51-23ov1EL6dlJRE1xTwvvRdWzIg6vRZf3pOInNagahhhzvowS07uJ-r16qGwluSiV16szIO2T6raiISIE57EX_iIZ02q1RVcXHoVSviNlWC_fpgDNkotpSRNHpWNsOn8Xx5YBn1xGrFKBFEMMqW2JiwWEHxYG8xoxVq1W1qItWI1I86IX-x4bpLebZto348N6QqSVQZ-mDP6If9ZMr7JffNSrmdK9-o3JG1nEmTypy"
+                        alt="Santorini Greece" class="w-full h-full object-cover" />
+                </div>
+                <div class="p-6">
+                    <span class="chip">Europe</span>
+                    <h3 class="text-xl font-serif text-secondary mt-3 mb-2">Santorini, Greece</h3>
+                    <p class="text-secondary/60 text-sm font-light leading-relaxed">Iconic blue domes, cliff-side
+                        sunsets, and crystal-clear Aegean waters. The quintessential Mediterranean escape.</p>
+                    <div class="flex items-center justify-between mt-5">
+                        <span class="text-xs text-secondary/40 uppercase tracking-wide flex items-center gap-1.5"><span
+                                class="material-symbols-outlined text-sm">schedule</span>5–10 days</span>
+                        <a href="plan-trip.html"
+                            class="btn ripple-btn text-primary border border-primary/30 hover:bg-primary hover:text-white text-xs px-4 py-2 rounded-full">Inquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kyoto -->
+            <div data-cat="asia"
+                class="dest-card card-hover group cursor-pointer rounded-2xl overflow-hidden bg-white shadow-soft border border-slate-100">
+                <div class="aspect-[4/3] overflow-hidden img-zoom">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZQDUFTXnRtqC3QcHVvuetWhqKIPJcJBOaAcXBHdhbT1tmOzTlXpkZsy6JeURLicva9wSTwqM4nRSmlv7ncUdTvILs0q5l9GBOl-vhoRYLMU8hYhWppHybIjZiAUCxFZP47FCKBFyjNAI-iq-q2uWwwRVLIxUumdbAIQAz_BcoMSbBAXghaJSnKHblFCNvXtc3Q_ca0K_0Og7mqLROm1V_ktWdnAvWK5Xdqj0mMZNbFHihidiMyWgbuil9W5KZho60xvR68nzhNE_S"
+                        alt="Kyoto Japan" class="w-full h-full object-cover" />
+                </div>
+                <div class="p-6">
+                    <span class="chip">Asia</span>
+                    <h3 class="text-xl font-serif text-secondary mt-3 mb-2">Kyoto, Japan</h3>
+                    <p class="text-secondary/60 text-sm font-light leading-relaxed">A city where ancient temples, geisha
+                        districts, and bamboo forests create an atmosphere of timeless wonder.</p>
+                    <div class="flex items-center justify-between mt-5">
+                        <span class="text-xs text-secondary/40 uppercase tracking-wide flex items-center gap-1.5"><span
+                                class="material-symbols-outlined text-sm">schedule</span>7–14 days</span>
+                        <a href="plan-trip.html"
+                            class="btn ripple-btn text-primary border border-primary/30 hover:bg-primary hover:text-white text-xs px-4 py-2 rounded-full">Inquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reykjavik -->
+            <div data-cat="europe"
+                class="dest-card card-hover group cursor-pointer rounded-2xl overflow-hidden bg-white shadow-soft border border-slate-100">
+                <div class="aspect-[4/3] overflow-hidden img-zoom">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOwJhH28MGs4K9ZtumKuRnHiELkBEO1ENUsqNujprTGImIziHwkijJxSVaCKcJNjYvR7BxESzaRf_p2ikPkW3IEwGFgIWtjxcO7cquMWyN1uDvKpqRxFD-RrApetjHx3pYWegriCcVZgr4xgA6uTRBJJ6Hl3mOz0fU0hYcMw72XWxccUf98leSZfaJiRL1aEGZ0sjXwDsX2bbWTUMBIy7JprJTURTxAn14OBzz5ZoVUddCUDOjfuI1lkoAMAtCMC6zeNNVJllpS44E"
+                        alt="Reykjavik Iceland" class="w-full h-full object-cover" />
+                </div>
+                <div class="p-6">
+                    <span class="chip">Europe</span>
+                    <h3 class="text-xl font-serif text-secondary mt-3 mb-2">Reykjavik, Iceland</h3>
+                    <p class="text-secondary/60 text-sm font-light leading-relaxed">Northern lights, geothermal springs,
+                        and dramatic volcanic landscapes make Iceland a bucket-list adventure.</p>
+                    <div class="flex items-center justify-between mt-5">
+                        <span class="text-xs text-secondary/40 uppercase tracking-wide flex items-center gap-1.5"><span
+                                class="material-symbols-outlined text-sm">schedule</span>5–8 days</span>
+                        <a href="plan-trip.html"
+                            class="btn ripple-btn text-primary border border-primary/30 hover:bg-primary hover:text-white text-xs px-4 py-2 rounded-full">Inquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Serengeti -->
+            <div data-cat="africa"
+                class="dest-card card-hover group cursor-pointer rounded-2xl overflow-hidden bg-white shadow-soft border border-slate-100">
+                <div class="aspect-[4/3] overflow-hidden img-zoom">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9Ks9NL3mE8a_8iVpZyCFmjL3XshVpmGiPHP1wdaqtTTnXieuIgSVttDV_DyCo3LBNjr3STUr-I7y1muyLzC-Y9cyP06xYDaXm2NVQbZ8Y7ZFcQg0oeYhdtrwgwMJQbnNMcBkbRt7E3jNCCm8J0QLau9Re0oxVtju6apVM2UewmiTMMDImluD2FzMeffHjFkVz-FtVfcBEhEq9MReoZXsRKbASq0NLLxUfQ4Exz1b5b2sFFQxuzFexCMf-BUMVgPxQA62_DQMIJ4y2"
+                        alt="Serengeti Tanzania" class="w-full h-full object-cover" />
+                </div>
+                <div class="p-6">
+                    <span class="chip">Africa</span>
+                    <h3 class="text-xl font-serif text-secondary mt-3 mb-2">Serengeti, Tanzania</h3>
+                    <p class="text-secondary/60 text-sm font-light leading-relaxed">Witness the Great Migration and stay
+                        in exclusive tented camps underneath a canopy of a million stars.</p>
+                    <div class="flex items-center justify-between mt-5">
+                        <span class="text-xs text-secondary/40 uppercase tracking-wide flex items-center gap-1.5"><span
+                                class="material-symbols-outlined text-sm">schedule</span>7–10 days</span>
+                        <a href="plan-trip.html"
+                            class="btn ripple-btn text-primary border border-primary/30 hover:bg-primary hover:text-white text-xs px-4 py-2 rounded-full">Inquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Maldives -->
+            <div data-cat="ocean"
+                class="dest-card card-hover group cursor-pointer rounded-2xl overflow-hidden bg-white shadow-soft border border-slate-100">
+                <div class="aspect-[4/3] overflow-hidden img-zoom">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPAUG1h5GGkl78tracLx8ocZqwp_iHU1zEoICIqjDbRJ0dW_oihTvdMkU3-19m--HQjNZ5NfKMaqvW7VXMNjpblp92H83a7GpLyKTZWy_f8WZLjzAjQ9nzoA-zpIlCM0Evr8dKzdsv_Ff1svJa-EXSFvHBkQdetTnAU3Ivf5SVeBvwjZE-RieMmrqZ0rTlNV5_85NAmutgHTbjphC9W4jctWw_BH7kzsikK-8MIxXRJl9rsH-JpheU9rzaulCQcsaJiT5diri_gEXD"
+                        alt="Maldives" class="w-full h-full object-cover" />
+                </div>
+                <div class="p-6">
+                    <span class="chip">Oceans &amp; Islands</span>
+                    <h3 class="text-xl font-serif text-secondary mt-3 mb-2">Maldives Private Escape</h3>
+                    <p class="text-secondary/60 text-sm font-light leading-relaxed">Overwater villas, bioluminescent
+                        lagoons, and private butler service in the Indian Ocean paradise.</p>
+                    <div class="flex items-center justify-between mt-5">
+                        <span class="text-xs text-secondary/40 uppercase tracking-wide flex items-center gap-1.5"><span
+                                class="material-symbols-outlined text-sm">schedule</span>6–12 days</span>
+                        <a href="plan-trip.html"
+                            class="btn ripple-btn text-primary border border-primary/30 hover:bg-primary hover:text-white text-xs px-4 py-2 rounded-full">Inquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Peru -->
+            <div data-cat="america"
+                class="dest-card card-hover group cursor-pointer rounded-2xl overflow-hidden bg-white shadow-soft border border-slate-100">
+                <div class="aspect-[4/3] overflow-hidden img-zoom">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZeJ_ubo_MPb0MT3MMowvGJL1lEoB8JVadgLGgQPc2nZh0qezaMNiExpRnndQs-mAia0670cPV1Z0Zrpco8hLSoOxQ2g9q8kn2PxjjRP33tBDeQ1Q7J8QPtBlctGDpgYOlNpgk70bX2MT83wscAE6RPkszj6Wy8hTRW7cRoa5dvnLsv-0b2Mb5NOS8rO_OR33TBZbfSuY2py4yCdR-emYjO-TyWH6xa0nnSJ6BNzerHquoMXvx30T2HFgxNQE2sZ4ARibsa2FJRdJk"
+                        alt="Peru Machu Picchu" class="w-full h-full object-cover" />
+                </div>
+                <div class="p-6">
+                    <span class="chip">Americas</span>
+                    <h3 class="text-xl font-serif text-secondary mt-3 mb-2">Mystical Peru</h3>
+                    <p class="text-secondary/60 text-sm font-light leading-relaxed">Walk the Inca Trail in supreme
+                        comfort. Explore the Amazon and witness sunrise over Machu Picchu.</p>
+                    <div class="flex items-center justify-between mt-5">
+                        <span class="text-xs text-secondary/40 uppercase tracking-wide flex items-center gap-1.5"><span
+                                class="material-symbols-outlined text-sm">schedule</span>10–14 days</span>
+                        <a href="plan-trip.html"
+                            class="btn ripple-btn text-primary border border-primary/30 hover:bg-primary hover:text-white text-xs px-4 py-2 rounded-full">Inquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Odisha -->
+            <div data-cat="india"
+                class="dest-card card-hover group cursor-pointer rounded-2xl overflow-hidden bg-white shadow-soft border border-slate-100">
+                <div class="aspect-[4/3] overflow-hidden img-zoom">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtkIwC6xHmZkpE61_8Y8LaJr9SkLd7fY7r8EXCRPa0w3Bg3mnY8bzMj8xwBExUGk6lNeDN3-pwCl2IiIxd_i4KDPFsJM9VPopaTayDZtnUw_ydCg0DEIlJP1Pnx2wTKJiScLFJLI8kl8mHVjjBiSAliRTmJ1djO2LoE2xjHb8lNMUyOd144t3tdwK7eyNegz6wPljgyFykrDwUQSBcGPqEc1YNKmomgi1wQ--PDzOj0mDi0VKVuCkauH8bjWvGvvUBqlMqZxlt2c8r"
+                        alt="Odisha India" class="w-full h-full object-cover" />
+                </div>
+                <div class="p-6">
+                    <span class="chip">India</span>
+                    <h3 class="text-xl font-serif text-secondary mt-3 mb-2">Odisha Heritage Circuit</h3>
+                    <p class="text-secondary/60 text-sm font-light leading-relaxed">Ancient temples, Sambalpuri
+                        handlooms, tribal art villages, and pristine beaches of the Bay of Bengal.</p>
+                    <div class="flex items-center justify-between mt-5">
+                        <span class="text-xs text-secondary/40 uppercase tracking-wide flex items-center gap-1.5"><span
+                                class="material-symbols-outlined text-sm">schedule</span>5–8 days</span>
+                        <a href="plan-trip.html"
+                            class="btn ripple-btn text-primary border border-primary/30 hover:bg-primary hover:text-white text-xs px-4 py-2 rounded-full">Inquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Venice -->
+            <div data-cat="europe"
+                class="dest-card card-hover group cursor-pointer rounded-2xl overflow-hidden bg-white shadow-soft border border-slate-100">
+                <div class="aspect-[4/3] overflow-hidden img-zoom">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWyb3ruzIwHV3sACrYHf4RJUzn3B9tLLWwW18jaNfNdbloeAcNzj_rNllrA3R2SoaHbz2rwlsh5o3KMZvu0m0334s8VmqHM6K8FQY8Ol80kO3o7Zyy7CBfDBQVWXnSsQvGGjInn6HiAvJlFIvk7o95ugBmcw39uBtjaT1g8UlNn926oSuz_NUbrgx_i5gaFxvI-JzgicNM954zFWaCbzmXdfwUbUgb63Aoq3tvUvzN_xi-RqYKWPlwWoKLS-lNejllKcz6lIRpf3dR"
+                        alt="Venice Italy" class="w-full h-full object-cover" />
+                </div>
+                <div class="p-6">
+                    <span class="chip">Europe</span>
+                    <h3 class="text-xl font-serif text-secondary mt-3 mb-2">Italian Renaissance</h3>
+                    <p class="text-secondary/60 text-sm font-light leading-relaxed">Venice gondola rides, private
+                        Florentine museums, and starlit dinners in Rome for the ultimate Italian art journey.</p>
+                    <div class="flex items-center justify-between mt-5">
+                        <span class="text-xs text-secondary/40 uppercase tracking-wide flex items-center gap-1.5"><span
+                                class="material-symbols-outlined text-sm">schedule</span>10–14 days</span>
+                        <a href="plan-trip.html"
+                            class="btn ripple-btn text-primary border border-primary/30 hover:bg-primary hover:text-white text-xs px-4 py-2 rounded-full">Inquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rajasthan -->
+            <div data-cat="india"
+                class="dest-card card-hover group cursor-pointer rounded-2xl overflow-hidden bg-white shadow-soft border border-slate-100">
+                <div class="aspect-[4/3] overflow-hidden img-zoom">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrJkFrxzaBMJjsYQhh-oyrv_TA7sYa-C2mmAAvb5n8gi0YwriVRvaPftQZCSt8IC8bEQbN5ypTN4NyzyokEFv1BtnBKr-z3-0AVYDAZPextf2uJlnEkGG31H7DpI2XqWftDgncn43GMW2fjQJ9ZCho4eVqXarXtQjE9IXnaKS44ljUIidClVxqLBPHTKN_WhtyncqG19box7UK3Ft-bmT-NaqfFw69rZbrcwFV2qL8e_XbkikqfgnknblJeplRfIvM8h3y_eXS9Jdl"
+                        alt="Rajasthan" class="w-full h-full object-cover" />
+                </div>
+                <div class="p-6">
+                    <span class="chip">India</span>
+                    <h3 class="text-xl font-serif text-secondary mt-3 mb-2">Royal Rajasthan</h3>
+                    <p class="text-secondary/60 text-sm font-light leading-relaxed">Palace hotels, camel safaris,
+                        vibrant bazaars, and the desert romance of Jaisalmer and Udaipur.</p>
+                    <div class="flex items-center justify-between mt-5">
+                        <span class="text-xs text-secondary/40 uppercase tracking-wide flex items-center gap-1.5"><span
+                                class="material-symbols-outlined text-sm">schedule</span>8–12 days</span>
+                        <a href="plan-trip.html"
+                            class="btn ripple-btn text-primary border border-primary/30 hover:bg-primary hover:text-white text-xs px-4 py-2 rounded-full">Inquire</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-secondary py-24 text-center px-6">
+        <h2 class="text-3xl md:text-5xl font-serif text-white mb-6">Can't find what you're looking for?</h2>
+        <p class="text-slate-400 text-lg mb-10 font-light">We craft completely bespoke itineraries. Tell us your dream.
+        </p>
+        <a href="plan-trip.html"
+            class="btn ripple-btn bg-primary text-white text-sm font-medium py-4 px-12 rounded-full shadow-lg shadow-primary/20 hover:bg-white hover:text-secondary">Plan
+            a Custom Trip</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-secondary text-white pt-24 pb-12 relative overflow-hidden">
+        <div
+            class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-secondary via-primary to-secondary opacity-50">
+        </div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+                <div class="flex flex-col gap-6">
+                    <a href="index.html" class="flex items-center">
+                        <img src="logo.png" alt="My Travel Guardian"
+                            class="h-10 w-auto object-contain brightness-0 invert opacity-80" />
+                    </a>
+                    <p class="text-slate-400 text-sm leading-relaxed font-light">
+                        Crafting bespoke journeys for the modern explorer. Rooted in heritage, delivered with global
+                        luxury standards.
+                    </p>
+                    <div class="text-slate-400 text-sm font-light mt-2 space-y-3 border-l-2 border-primary/40 pl-4">
+                        <p class="flex items-start gap-3"><span
+                                class="material-symbols-outlined text-[18px] text-accent mt-0.5">location_on</span>
+                            <span class="leading-relaxed">House no 2, 5, Lane 2, Poddar Colony, Khetrajpur, Sambalpur,
+                                Odisha 768003<br><i class="text-white/40 text-xs">Near Durga Mangalam</i></span>
+                        </p>
+                        <p class="flex items-center gap-3"><span
+                                class="material-symbols-outlined text-[18px] text-accent">schedule</span> <span>Mon -
+                                Sun, 10 AM - 8 PM</span></p>
+                    </div>
+                    <div class="flex gap-4">
+                        <a class="text-white/40 hover:text-primary transition-colors" href="https://facebook.com"
+                            target="_blank"><span class="material-symbols-outlined">public</span></a>
+                        <a class="text-white/40 hover:text-primary transition-colors" href="https://instagram.com"
+                            target="_blank"><span class="material-symbols-outlined">photo_camera</span></a>
+                        <a class="text-white/40 hover:text-primary transition-colors"
+                            href="mailto:hello@mytravelguardian.com"><span
+                                class="material-symbols-outlined">mail</span></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-serif text-lg mb-8 text-accent">Company</h3>
+                    <ul class="space-y-4 text-sm text-slate-400 font-light">
+                        <li><a class="hover:text-white transition-colors" href="about.html">Our Story</a></li>
+                        <li><a class="hover:text-white transition-colors" href="about.html#team">The Team</a></li>
+                        <li><a class="hover:text-white transition-colors" href="about.html">Careers</a></li>
+                        <li><a class="hover:text-white transition-colors" href="about.html">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-serif text-lg mb-8 text-accent">Support</h3>
+                    <ul class="space-y-4 text-sm text-slate-400 font-light">
+                        <li><a class="hover:text-white transition-colors" href="plan-trip.html">Contact Guardian</a>
+                        </li>
+                        <li><a class="hover:text-white transition-colors" href="#">Terms of Service</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-serif text-lg mb-8 text-accent">Newsletter</h3>
+                    <p class="text-slate-400 text-sm mb-6 font-light">Subscribe for heritage stories and travel
+                        inspiration.</p>
+                    <form class="flex flex-col gap-4">
+                        <input
+                            class="bg-white/5 border border-white/10 rounded-none px-4 py-3 text-sm text-white focus:outline-none focus:border-primary transition-colors"
+                            placeholder="Email address" type="email" />
+                        <button
+                            class="btn ripple-btn bg-primary hover:bg-white hover:text-secondary text-white text-sm font-medium py-3 px-6 rounded-none transition-all uppercase tracking-widest"
+                            type="button"
+                            onclick="this.closest('form').dispatchEvent(new Event('submit',{bubbles:true,cancelable:true}))">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-slate-500 text-xs tracking-wide">© 2023 My Travel Guardian. All rights reserved.</p>
+                <div class="flex gap-8 text-xs text-slate-500 uppercase tracking-widest">
+                    <a class="hover:text-white transition-colors" href="#">Privacy</a>
+                    <a class="hover:text-white transition-colors" href="#">Terms</a>
+                    <a class="hover:text-white transition-colors" href="destinations.html">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- TOAST -->
+    <div id="toast"><span class="material-symbols-outlined text-primary text-lg">check_circle</span><span
+            id="toast-msg">Done!</span></div>
+
+    <script src="app.js"></script>
+    <script>
+        // Filter
+        function filterCards(cat) {
+            document.querySelectorAll('.dest-card').forEach(c => {
+                const show = cat === 'all' || c.dataset.cat === cat;
+                c.style.transition = 'opacity 0.4s, transform 0.4s';
+                if (show) { c.style.opacity = '1'; c.style.transform = 'scale(1)'; c.style.display = ''; }
+                else {
+                    c.style.opacity = '0'; c.style.transform = 'scale(0.95)';
+                    setTimeout(() => { if (c.dataset.cat !== cat && cat !== 'all') c.style.display = 'none'; }, 400);
+                }
+            });
+            document.querySelectorAll('[data-filter]').forEach(b => b.classList.remove('active-chip', 'bg-primary', 'text-white'));
+            const activeBtn = document.querySelector('[data-filter="' + cat + '"]');
+            if (activeBtn) { activeBtn.classList.add('bg-primary', 'text-white'); }
+        }
+    </script>
+</body>
+
+</html>

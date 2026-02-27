@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Journal – My Travel Guardian</title>
+    <meta name="description"
+        content="Travel stories, guides, and lifestyle articles from My Travel Guardian. Inspiration for your next luxury adventure." />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3E7B78", "secondary": "#1B2430", "accent": "#E6DCCA", "background-light": "#F9F7F2", "background-dark": "#111820"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["'Playfair Display'", "Georgia", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.25rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        "soft": "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
+                        "soft-lg": "0 10px 40px -5px rgba(0, 0, 0, 0.05)"
+                    },
+                    backgroundImage: {
+                        'sambalpuri': "url('data:image/svg+xml,%3Csvg width=\\'60\\' height=\\'60\\' viewBox=\\'0 0 60 60\\' xmlns=\\'http://www.w3.org/2000/svg\\'%3E%3Cg fill=\\'none\\' fill-rule=\\'evenodd\\'%3E%3Cg fill=\\'%233E7B78\\' fill-opacity=\\'0.05\\'%3E%3Cpath d=\\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-background-light font-display text-secondary overflow-x-hidden page-transition">
+
+    <!-- NAV -->
+    <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" alt="My Travel Guardian" class="h-24 w-auto object-contain" />
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="nav-link text-sm font-medium text-secondary/70 hover:text-primary transition-colors"
+                    href="destinations.html">Destinations</a>
+                <a class="nav-link text-sm font-medium text-secondary/70 hover:text-primary transition-colors"
+                    href="heritage.html">Heritage</a>
+                <a class="nav-link text-sm font-medium text-primary" href="journal.html">Journal</a>
+            </div>
+            <a href="plan-trip.html"
+                class="btn plan-trip-btn ripple-btn bg-primary text-white text-sm font-medium py-2.5 px-7 rounded-full shadow-md shadow-primary/20 transition-all duration-300">Plan
+                My Trip</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="pt-20 bg-secondary py-28 px-6 text-center relative overflow-hidden">
+        <div class="absolute inset-0 grid-bg opacity-30"></div>
+        <div class="relative z-10 fade-in-section is-visible">
+            <span class="text-accent text-xs font-bold uppercase tracking-[0.25em]">Stories &amp; Guides</span>
+            <h1 class="text-white text-5xl md:text-6xl font-serif mt-4 mb-4">The Journal</h1>
+            <p class="text-slate-400 text-lg font-light max-w-xl mx-auto">Travel inspiration, cultural stories, and
+                curated guides from the road.</p>
+        </div>
+    </header>
+
+    <!-- FEATURED -->
+    <section class="max-w-7xl mx-auto px-6 py-16 fade-in-section">
+        <div class="group cursor-pointer grid lg:grid-cols-2 gap-10 bg-white rounded-2xl overflow-hidden shadow-soft border border-slate-100 card-hover"
+            onclick="showArticle('hidden-gems')">
+            <div class="aspect-[16/10] lg:aspect-auto overflow-hidden img-zoom">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoVCztuS08M3oZOQzgE-rfyWdp3_9HXPof-qRtlL7SFy3Dl7NyMc765-NIAahBkOHCeHEHlP4hC2C3KULzk3L96sJbftYrzgwM2qJgnnPMRCBdIJzXKhtDlrwndZCsEzrTBYJWV-I7WZT3ZUmTIvnsXrHC3nvCnZLcx2cgyivX9XQ_DOVTXZqes4b4apDi4eQLpl9Y1a8DiHIUGFc2BGZKj4ceAFpg34NifATA2N__kT-IJMB2fu5qztdwNPbd1UVlzcYHNGjHtv15"
+                    alt="Northern Europe" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-10 flex flex-col justify-center">
+                <span class="chip mb-4">Guides</span>
+                <h2
+                    class="text-2xl md:text-3xl font-serif text-secondary leading-tight group-hover:text-primary transition-colors mb-4">
+                    10 Hidden Gems in Northern Europe</h2>
+                <p class="text-secondary/60 font-light leading-relaxed mb-6">Discover the untouched beauty of the Nordic
+                    countries, from fjords to remote islands that few tourists ever reach. We reveal the secret spots
+                    our guardians love most.</p>
+                <div class="flex items-center gap-4 text-xs text-secondary/40 mb-8">
+                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">person</span>
+                        By Arjun Sen</span>
+                    <span class="flex items-center gap-1"><span
+                            class="material-symbols-outlined text-sm">schedule</span> 8 min read</span>
+                    <span>Feb 10, 2025</span>
+                </div>
+                <button
+                    class="btn ripple-btn self-start bg-primary text-white py-3 px-7 rounded-full text-sm shadow-md shadow-primary/20"
+                    onclick="showArticle('hidden-gems')">Read Article</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARTICLE GRID -->
+    <section class="max-w-7xl mx-auto px-6 pb-24">
+        <h2 class="text-2xl font-serif text-secondary mb-10">More Stories</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+            <article
+                class="card-hover group cursor-pointer bg-white rounded-2xl overflow-hidden shadow-soft border border-slate-100"
+                onclick="showArticle('michelin')">
+                <div class="aspect-[16/10] overflow-hidden img-zoom">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOiDNGe1xpcDIPe4YiUSSyLKJc3VPb2zufXeC1Ma9pBmoIuEVUNc608DXkN2LM-YPHhkP-8pKr-LgjUFrVmV-teJmye9s5a_-XT43SFVyHcscf5-lF3FyMx_qxIEdeFQg236H5m67iJ3EiB3yJCtHApojH266OV5QUXhPhAUQnyGj0Ok-5AHxBnR16AuQbWJ7W5ut_YS0IbwsOi6qlc369a_JJJnkpldleZR5yZuBVhkPMRTa3j3XFjdAoyhtQif_-uWPJCgyR4VvG"
+                        alt="Luxury dining" class="w-full h-full object-cover" />
+                </div>
+                <div class="p-6">
+                    <span class="chip">Lifestyle</span>
+                    <h3
+                        class="text-lg font-serif text-secondary mt-3 mb-2 group-hover:text-primary transition-colors leading-tight">
+                        The Ultimate Guide to Michelin Dining</h3>
+                    <p class="text-secondary/60 text-sm font-light leading-relaxed line-clamp-2 mb-4">How to secure
+                        reservations at the world's most exclusive restaurants.</p>
+                    <div class="flex items-center justify-between text-xs text-secondary/40">
+                        <span>Jan 22, 2025</span><span>6 min read</span>
+                    </div>
+                </div>
+            </article>
+
+            <article
+                class="card-hover group cursor-pointer bg-white rounded-2xl overflow-hidden shadow-soft border border-slate-100"
+                onclick="showArticle('packing')">
+                <div class="aspect-[16/10] overflow-hidden img-zoom">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDQWe4OsoVhhGPe7K8R3yfMlqLeUWInwp3qhr123eD_QAG9dFDMoatL57TSj5JJJfaPD3-j6LbR261bkj5FgiX7ijkfFx9_tzUxQmg07L1V8i9hT4IlElxD4iHOeni9cT9hgBRG5SIX6aWI_7ukWu3tGMeszOZEmMt0ZtBb8dRyLeajxNBx_o4hNWJsXAN9vCUsXI_9ICt07FKZ2ehkTvu_8-QnvhitMgi-Rnb8X4788QsN5hfUIELWPNvMalC-oabkEkHR3YkIog5"
+                        alt="Packing" class="w-full h-full object-cover" />
+                </div>
+                <div class="p-6">
+                    <span class="chip">Tips</span>
+                    <h3
+                        class="text-lg font-serif text-secondary mt-3 mb-2 group-hover:text-primary transition-colors leading-tight">
+                        Packing Essentials for the Modern Traveler</h3>
+                    <p class="text-secondary/60 text-sm font-light leading-relaxed line-clamp-2 mb-4">Curated lists of
+                        must-have items for long-haul flights and tropical getaways.</p>
+                    <div class="flex items-center justify-between text-xs text-secondary/40">
+                        <span>Jan 8, 2025</span><span>5 min read</span>
+                    </div>
+                </div>
+            </article>
+
+            <article
+                class="card-hover group cursor-pointer bg-white rounded-2xl overflow-hidden shadow-soft border border-slate-100"
+                onclick="showArticle('maldives')">
+                <div class="aspect-[16/10] overflow-hidden img-zoom">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPAUG1h5GGkl78tracLx8ocZqwp_iHU1zEoICIqjDbRJ0dW_oihTvdMkU3-19m--HQjNZ5NfKMaqvW7VXMNjpblp92H83a7GpLyKTZWy_f8WZLjzAjQ9nzoA-zpIlCM0Evr8dKzdsv_Ff1svJa-EXSFvHBkQdetTnAU3Ivf5SVeBvwjZE-RieMmrqZ0rTlNV5_85NAmutgHTbjphC9W4jctWw_BH7kzsikK-8MIxXRJl9rsH-JpheU9rzaulCQcsaJiT5diri_gEXD"
+                        alt="Maldives" class="w-full h-full object-cover" />
+                </div>
+                <div class="p-6">
+                    <span class="chip">Destinations</span>
+                    <h3
+                        class="text-lg font-serif text-secondary mt-3 mb-2 group-hover:text-primary transition-colors leading-tight">
+                        Why the Maldives Still Surprises Seasoned Travellers</h3>
+                    <p class="text-secondary/60 text-sm font-light leading-relaxed line-clamp-2 mb-4">Beyond the
+                        overwater villa – discovering bioluminescent nights and local island culture.</p>
+                    <div class="flex items-center justify-between text-xs text-secondary/40">
+                        <span>Dec 15, 2024</span><span>7 min read</span>
+                    </div>
+                </div>
+            </article>
+
+            <article
+                class="card-hover group cursor-pointer bg-white rounded-2xl overflow-hidden shadow-soft border border-slate-100"
+                onclick="showArticle('odisha')">
+                <div class="aspect-[16/10] overflow-hidden img-zoom">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtkIwC6xHmZkpE61_8Y8LaJr9SkLd7fY7r8EXCRPa0w3Bg3mnY8bzMj8xwBExUGk6lNeDN3-pwCl2IiIxd_i4KDPFsJM9VPopaTayDZtnUw_ydCg0DEIlJP1Pnx2wTKJiScLFJLI8kl8mHVjjBiSAliRTmJ1djO2LoE2xjHb8lNMUyOd144t3tdwK7eyNegz6wPljgyFykrDwUQSBcGPqEc1YNKmomgi1wQ--PDzOj0mDi0VKVuCkauH8bjWvGvvUBqlMqZxlt2c8r"
+                        alt="Odisha" class="w-full h-full object-cover" />
+                </div>
+                <div class="p-6">
+                    <span class="chip">Heritage</span>
+                    <h3
+                        class="text-lg font-serif text-secondary mt-3 mb-2 group-hover:text-primary transition-colors leading-tight">
+                        Sambalpur: India's Best-Kept Secret</h3>
+                    <p class="text-secondary/60 text-sm font-light leading-relaxed line-clamp-2 mb-4">The story of the
+                        city that inspired an entire travel philosophy — and why you need to visit.</p>
+                    <div class="flex items-center justify-between text-xs text-secondary/40">
+                        <span>Nov 28, 2024</span><span>9 min read</span>
+                    </div>
+                </div>
+            </article>
+
+            <article
+                class="card-hover group cursor-pointer bg-white rounded-2xl overflow-hidden shadow-soft border border-slate-100"
+                onclick="showArticle('paris')">
+                <div class="aspect-[16/10] overflow-hidden img-zoom">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuI2Rp3Bya-uHqIeIiu9_df_KW96AsBh2JMtK2DQMrqRMvNC4AWspUYdZfnPBK6vg2TmObFWovi3FJUawosZJ-nVsrRRN5phL_vjJBhuQRnLpiazu23xecTcTNxbmFMvaQ5ZpANa4ueQ3Tp1uInusFnwkCKNNbU1Y56mvOYGykr2GcSXLGOf4Q-uCpBHWLmfcXsbXTeY-j8QDhj-aiXbFADNqG3WpIsUh1xp2xYpRV5-qS6Shj7US98cK5X8bBze25tnJ_LSzw7ieF"
+                        alt="Paris" class="w-full h-full object-cover" />
+                </div>
+                <div class="p-6">
+                    <span class="chip">Lifestyle</span>
+                    <h3
+                        class="text-lg font-serif text-secondary mt-3 mb-2 group-hover:text-primary transition-colors leading-tight">
+                        Paris Fashion Week: A Private Insider's Guide</h3>
+                    <p class="text-secondary/60 text-sm font-light leading-relaxed line-clamp-2 mb-4">Front-row access,
+                        where to stay, and how to navigate the world's most glamorous fashion event.</p>
+                    <div class="flex items-center justify-between text-xs text-secondary/40">
+                        <span>Oct 10, 2024</span><span>10 min read</span>
+                    </div>
+                </div>
+            </article>
+
+            <article
+                class="card-hover group cursor-pointer bg-white rounded-2xl overflow-hidden shadow-soft border border-slate-100"
+                onclick="showArticle('safari')">
+                <div class="aspect-[16/10] overflow-hidden img-zoom">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9Ks9NL3mE8a_8iVpZyCFmjL3XshVpmGiPHP1wdaqtTTnXieuIgSVttDV_DyCo3LBNjr3STUr-I7y1muyLzC-Y9cyP06xYDaXm2NVQbZ8Y7ZFcQg0oeYhdtrwgwMJQbnNMcBkbRt7E3jNCCm8J0QLau9Re0oxVtju6apVM2UewmiTMMDImluD2FzMeffHjFkVz-FtVfcBEhEq9MReoZXsRKbASq0NLLxUfQ4Exz1b5b2sFFQxuzFexCMf-BUMVgPxQA62_DQMIJ4y2"
+                        alt="Safari" class="w-full h-full object-cover" />
+                </div>
+                <div class="p-6">
+                    <span class="chip">Guides</span>
+                    <h3
+                        class="text-lg font-serif text-secondary mt-3 mb-2 group-hover:text-primary transition-colors leading-tight">
+                        A First-Timer's Guide to the African Safari</h3>
+                    <p class="text-secondary/60 text-sm font-light leading-relaxed line-clamp-2 mb-4">Everything you
+                        need to know before your first game drive — choosing the right camp, timing, and more.</p>
+                    <div class="flex items-center justify-between text-xs text-secondary/40">
+                        <span>Sep 5, 2024</span><span>11 min read</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ARTICLE MODAL -->
+    <div id="article-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 hidden">
+        <div class="absolute inset-0 bg-secondary/70 backdrop-blur-sm" onclick="closeArticle()"></div>
+        <div id="modal-content"
+            class="relative bg-white rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-10 shadow-2xl z-10">
+            <button onclick="closeArticle()"
+                class="btn ripple-btn absolute top-4 right-4 size-10 rounded-full bg-slate-100 hover:bg-red-50 hover:text-red-500 flex items-center justify-center">
+                <span class="material-symbols-outlined text-xl">close</span>
+            </button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-secondary text-white pt-24 pb-12 relative overflow-hidden">
+        <div
+            class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-secondary via-primary to-secondary opacity-50">
+        </div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+                <div class="flex flex-col gap-6">
+                    <a href="index.html" class="flex items-center">
+                        <img src="logo.png" alt="My Travel Guardian"
+                            class="h-10 w-auto object-contain brightness-0 invert opacity-80" />
+                    </a>
+                    <p class="text-slate-400 text-sm leading-relaxed font-light">
+                        Crafting bespoke journeys for the modern explorer. Rooted in heritage, delivered with global
+                        luxury standards.
+                    </p>
+                    <div class="text-slate-400 text-sm font-light mt-2 space-y-3 border-l-2 border-primary/40 pl-4">
+                        <p class="flex items-start gap-3"><span
+                                class="material-symbols-outlined text-[18px] text-accent mt-0.5">location_on</span>
+                            <span class="leading-relaxed">House no 2, 5, Lane 2, Poddar Colony, Khetrajpur, Sambalpur,
+                                Odisha 768003<br><i class="text-white/40 text-xs">Near Durga Mangalam</i></span>
+                        </p>
+                        <p class="flex items-center gap-3"><span
+                                class="material-symbols-outlined text-[18px] text-accent">schedule</span> <span>Mon -
+                                Sun, 10 AM - 8 PM</span></p>
+                    </div>
+                    <div class="flex gap-4">
+                        <a class="text-white/40 hover:text-primary transition-colors" href="https://facebook.com"
+                            target="_blank"><span class="material-symbols-outlined">public</span></a>
+                        <a class="text-white/40 hover:text-primary transition-colors" href="https://instagram.com"
+                            target="_blank"><span class="material-symbols-outlined">photo_camera</span></a>
+                        <a class="text-white/40 hover:text-primary transition-colors"
+                            href="mailto:hello@mytravelguardian.com"><span
+                                class="material-symbols-outlined">mail</span></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-serif text-lg mb-8 text-accent">Company</h3>
+                    <ul class="space-y-4 text-sm text-slate-400 font-light">
+                        <li><a class="hover:text-white transition-colors" href="about.html">Our Story</a></li>
+                        <li><a class="hover:text-white transition-colors" href="about.html#team">The Team</a></li>
+                        <li><a class="hover:text-white transition-colors" href="about.html">Careers</a></li>
+                        <li><a class="hover:text-white transition-colors" href="about.html">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-serif text-lg mb-8 text-accent">Support</h3>
+                    <ul class="space-y-4 text-sm text-slate-400 font-light">
+                        <li><a class="hover:text-white transition-colors" href="plan-trip.html">Contact Guardian</a>
+                        </li>
+                        <li><a class="hover:text-white transition-colors" href="#">Terms of Service</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-serif text-lg mb-8 text-accent">Newsletter</h3>
+                    <p class="text-slate-400 text-sm mb-6 font-light">Subscribe for heritage stories and travel
+                        inspiration.</p>
+                    <form class="flex flex-col gap-4">
+                        <input
+                            class="bg-white/5 border border-white/10 rounded-none px-4 py-3 text-sm text-white focus:outline-none focus:border-primary transition-colors"
+                            placeholder="Email address" type="email" />
+                        <button
+                            class="btn ripple-btn bg-primary hover:bg-white hover:text-secondary text-white text-sm font-medium py-3 px-6 rounded-none transition-all uppercase tracking-widest"
+                            type="button"
+                            onclick="this.closest('form').dispatchEvent(new Event('submit',{bubbles:true,cancelable:true}))">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-slate-500 text-xs tracking-wide">© 2023 My Travel Guardian. All rights reserved.</p>
+                <div class="flex gap-8 text-xs text-slate-500 uppercase tracking-widest">
+                    <a class="hover:text-white transition-colors" href="#">Privacy</a>
+                    <a class="hover:text-white transition-colors" href="#">Terms</a>
+                    <a class="hover:text-white transition-colors" href="destinations.html">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast"><span class="material-symbols-outlined text-primary text-lg">check_circle</span><span
+            id="toast-msg">Done!</span></div>
+    <script src="app.js"></script>
+    <script>
+        const articles = {
+            'hidden-gems': { title: '10 Hidden Gems in Northern Europe', cat: 'Guides', date: 'Feb 10, 2025', read: '8 min', body: `<p class="text-secondary/70 leading-loose mb-4 font-light">Scandinavia is often reduced to Oslo, Stockholm, and Copenhagen in guidebooks. But venture beyond these capitals, and you'll uncover an extraordinary world of mist-covered fjords, tiny fishing villages, and forests that seem to belong to another century.</p><p class="text-secondary/70 leading-loose mb-4 font-light">From the Lofoten Islands in Norway — where colorful rorbuer (fishermen's cabins) perch on turquoise still waters — to the Faroe Islands' dramatic sea-cliffs, Northern Europe rewards the traveler who dares to explore.</p><h4 class="font-serif text-xl text-secondary my-5">Our Top 5 Picks:</h4><ul class="space-y-3 text-secondary/70 font-light list-disc pl-5"><li>Lofoten Islands, Norway</li><li>Faroe Islands, Denmark</li><li>Ålesund, Norway</li><li>Gotland, Sweden</li><li>Åland Islands, Finland</li></ul>` },
+            'michelin': { title: 'The Ultimate Guide to Michelin Dining', cat: 'Lifestyle', date: 'Jan 22, 2025', read: '6 min', body: `<p class="text-secondary/70 leading-loose mb-4 font-light">Securing a table at a 3-Michelin star restaurant is an art form. The best establishments in the world — from Noma in Copenhagen to The French Laundry in California — release bookings months in advance. Here is the strategy our concierge team uses.</p><p class="text-secondary/70 leading-loose mb-4 font-light">We partner with hotel concierges, use online platforms like Resy and The Fork, and leverage relationships built over years of curating bespoke journeys. Our clients rarely miss out on the restaurants they desire.</p>` },
+            'packing': { title: 'Packing Essentials for the Modern Traveler', cat: 'Tips', date: 'Jan 8, 2025', read: '5 min', body: `<p class="text-secondary/70 leading-loose mb-4 font-light">The golden rule of luxury travel packing: pack half of what you think you need, and twice the quality. We recommend a capsule wardrobe of neutral tones that can be dressed up or down, paired with one statement piece per destination.</p><p class="text-secondary/70 leading-loose mb-4 font-light">Key items our guardians never travel without: a noise-cancellation headset, portable power bank, premium travel pillow, and an offline maps app loaded for every destination.</p>` },
+            'maldives': { title: 'Why the Maldives Still Surprises', cat: 'Destinations', date: 'Dec 15, 2024', read: '7 min', body: `<p class="text-secondary/70 leading-loose mb-4 font-light">Beyond the iconic overwater bungalow lies a Maldives few visitors ever discover. Local islands like Maafushi and Thulusdhoo offer a glimpse into authentic Maldivian life — morning fish markets, coral mosques, and freshly made roshi bread.</p><p class="text-secondary/70 leading-loose mb-4 font-light">At Vaadhoo Island, bioluminescent plankton turns the nighttime shoreline into a galaxy of blue light. It is one of the most magical natural phenomena on earth — and entirely free to witness.</p>` },
+            'odisha': { title: 'Sambalpur: India\'s Best-Kept Secret', cat: 'Heritage', date: 'Nov 28, 2024', read: '9 min', body: `<p class="text-secondary/70 leading-loose mb-4 font-light">Nestled on the banks of the Mahanadi river in western Odisha, Sambalpur is a city of contrasts — ancient in spirit but decidedly modern in aspiration. It is from here that My Travel Guardian was born, and it is here that we return for inspiration.</p><p class="text-secondary/70 leading-loose mb-4 font-light">The city's handloom industry produces some of India's finest textiles. The Sambalpuri sari — with its distinctive ikkat pattern — is as much a cultural statement as it is a fashion one. GI tagged and globally celebrated, these textiles are the city's pride.</p>` },
+            'paris': { title: 'Paris Fashion Week: A Private Insider\'s Guide', cat: 'Lifestyle', date: 'Oct 10, 2024', read: '10 min', body: `<p class="text-secondary/70 leading-loose mb-4 font-light">Paris Fashion Week is more than a runway show — it is a city-wide installation of creativity, excess, and culture. Held twice a year, it attracts the world's most influential figures in fashion, art, and media.</p><p class="text-secondary/70 leading-loose mb-4 font-light">Our guardians secure front-row access to select shows, arrange private shopping appointments at Chanel, Dior, and Louis Vuitton, and book suites at legendary addresses including The Ritz and Le Bristol.</p>` },
+            'safari': { title: 'A First-Timer\'s Guide to the African Safari', cat: 'Guides', date: 'Sep 5, 2024', read: '11 min', body: `<p class="text-secondary/70 leading-loose mb-4 font-light">A safari is not just a wildlife experience — it is a shift in perspective. The vast silence of the savannah at dawn, the distant rumble of a lion, and the sunrise over the Serengeti crater are moments that permanently alter your understanding of the world.</p><p class="text-secondary/70 leading-loose mb-4 font-light">Timing is everything. The Great Migration — when over two million wildebeest cross the Mara River — peaks between July and October. Book a permanent tented camp for the best combination of comfort and immersion.</p>` },
+        };
+
+        function showArticle(id) {
+            const a = articles[id]; if (!a) return;
+            document.getElementById('modal-body').innerHTML = `
+    <span class="chip mb-4">${a.cat}</span>
+    <h2 class="text-2xl font-serif text-secondary mt-3 mb-3 leading-snug">${a.title}</h2>
+    <div class="flex items-center gap-4 text-xs text-secondary/40 mb-8">
+      <span>${a.date}</span><span>${a.read} read</span>
+    </div>
+    ${a.body}
+    <a href="plan-trip.html" class="btn ripple-btn mt-8 inline-block bg-primary text-white py-3 px-7 rounded-full text-sm shadow-md shadow-primary/20">Plan a Similar Trip</a>`;
+            const modal = document.getElementById('article-modal');
+            modal.classList.remove('hidden');
+            modal.style.animation = 'pageIn 0.35s ease-out both';
+        }
+        function closeArticle() { document.getElementById('article-modal').classList.add('hidden'); }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Plan My Trip – My Travel Guardian</title>
+    <meta name="description"
+        content="Start planning your dream journey with My Travel Guardian. Fill out our inquiry form and we'll create a bespoke itinerary just for you." />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3E7B78", "secondary": "#1B2430", "accent": "#E6DCCA", "background-light": "#F9F7F2", "background-dark": "#111820"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["'Playfair Display'", "Georgia", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.25rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        "soft": "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
+                        "soft-lg": "0 10px 40px -5px rgba(0, 0, 0, 0.05)"
+                    },
+                    backgroundImage: {
+                        'sambalpuri': "url('data:image/svg+xml,%3Csvg width=\\'60\\' height=\\'60\\' viewBox=\\'0 0 60 60\\' xmlns=\\'http://www.w3.org/2000/svg\\'%3E%3Cg fill=\\'none\\' fill-rule=\\'evenodd\\'%3E%3Cg fill=\\'%233E7B78\\' fill-opacity=\\'0.05\\'%3E%3Cpath d=\\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-background-light font-display text-secondary overflow-x-hidden page-transition">
+
+    <!-- NAV -->
+    <nav
+        class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 nav-transparent border-b border-transparent">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" alt="My Travel Guardian" class="h-24 w-auto object-contain" />
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="nav-link text-sm font-medium tracking-wide text-secondary/70 hover:text-primary transition-colors"
+                    href="destinations.html">Destinations</a>
+                <a class="nav-link text-sm font-medium tracking-wide text-secondary/70 hover:text-primary transition-colors"
+                    href="heritage.html">Heritage</a>
+                <a class="nav-link text-sm font-medium tracking-wide text-secondary/70 hover:text-primary transition-colors"
+                    href="journal.html">Journal</a>
+                <a class="nav-link text-sm font-medium tracking-wide text-secondary/70 hover:text-primary transition-colors"
+                    href="contact.html">Contact</a>
+            </div>
+            <a href="about.html"
+                class="btn ripple-btn plan-trip-btn bg-transparent border border-primary text-primary hover:bg-primary hover:text-white text-sm font-medium py-2.5 px-8 rounded-full transition-all duration-300">Our
+                Story</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="relative w-full min-h-[50vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0 bg-cover bg-center parallax-bg"
+            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDtX_OOFq-e_1nF5Vl-5rPcyO_35X8mEEXOIt02xG2C5J-108D_5oZ5e9V9u_YJ6gC5x9XnL72S14I59G--Y_-oH6Q5XJ-eM_vI2n1tS_O1eWbB_U_aN1P-Y2GgI8Yp66hE50S51H2Oa2GQUg-I8Q7h7rZJ0mFv3h8Jk28vR_hK5sJjLw5bKq9t-T-1iB9vW_3k7uI');">
+            <div class="absolute inset-0 bg-secondary/50"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-background-light via-transparent to-transparent"></div>
+        </div>
+        <div
+            class="relative z-10 flex flex-col items-center text-center px-6 max-w-4xl mx-auto mt-24 fade-in-section is-visible">
+            <span class="text-accent text-sm font-bold uppercase tracking-[0.3em] mb-4 drop-shadow-md">Let's
+                Begin</span>
+            <h1 class="text-white text-5xl md:text-7xl font-serif mt-2 mb-6 drop-shadow-md">Plan My Trip</h1>
+            <p
+                class="text-white/90 text-lg md:text-xl font-light mb-8 max-w-2xl leading-relaxed tracking-wide drop-shadow-sm">
+                Tell us your dream. We'll handle every detail with the care of a guardian.</p>
+        </div>
+    </header>
+
+    <!-- FORM + INFO -->
+    <section class="max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-5 gap-16 fade-in-section relative z-20 -mt-10">
+
+        <!-- LEFT INFO -->
+        <div class="lg:col-span-2 space-y-10">
+            <div>
+                <h2 class="text-3xl font-serif text-secondary mb-6 leading-tight">Begin Your<br /><span
+                        class="italic text-primary">Journey Here</span></h2>
+                <div
+                    class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-primary/20 before:to-transparent">
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-primary text-white font-bold shrink-0 shadow-md transform group-hover:scale-110 transition-transform z-10">
+                            1</div>
+                        <div
+                            class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-xl bg-white shadow-sm border border-secondary/5 group-hover:border-primary/20 transition-colors ml-4 md:ml-0 md:mr-4">
+                            <h4 class="font-semibold text-secondary mb-1">Share Info</h4>
+                            <p class="text-secondary/60 text-xs font-light">Fill out the form with your vision.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-primary/20 text-primary font-bold shrink-0 shadow-sm transform group-hover:bg-primary group-hover:text-white transition-all z-10">
+                            2</div>
+                        <div
+                            class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-xl bg-white shadow-sm border border-secondary/5 group-hover:border-primary/20 transition-colors ml-4 md:ml-auto md:mr-0 md:ml-4">
+                            <h4 class="font-semibold text-secondary mb-1">Consultation</h4>
+                            <p class="text-secondary/60 text-xs font-light">We'll reach out within 24 hours.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-primary/20 text-primary font-bold shrink-0 shadow-sm transform group-hover:bg-primary group-hover:text-white transition-all z-10">
+                            3</div>
+                        <div
+                            class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-xl bg-white shadow-sm border border-secondary/5 group-hover:border-primary/20 transition-colors ml-4 md:ml-0 md:mr-4">
+                            <h4 class="font-semibold text-secondary mb-1">Bespoke Plan</h4>
+                            <p class="text-secondary/60 text-xs font-light">Receive a custom curated proposal.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="bg-gradient-to-br from-secondary to-secondary/90 rounded-2xl p-8 border border-white/10 text-white shadow-xl relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 opacity-10">
+                    <span class="material-symbols-outlined text-[150px]">travel_explore</span>
+                </div>
+                <h3 class="font-serif text-2xl mb-6 relative z-10">Direct Connect</h3>
+                <div class="space-y-5 relative z-10">
+                    <a href="tel:+919583420885"
+                        class="flex gap-4 items-center text-white/80 hover:text-accent transition-colors">
+                        <div class="size-10 rounded-full bg-white/10 flex items-center justify-center"><span
+                                class="material-symbols-outlined">call</span></div>
+                        <span class="font-light tracking-wide">+91 95834 20885</span>
+                    </a>
+                    <a href="https://wa.me/919583420885" target="_blank"
+                        class="flex gap-4 items-center text-white/80 hover:text-emerald-400 transition-colors">
+                        <div class="size-10 rounded-full bg-white/10 flex items-center justify-center"><span
+                                class="material-symbols-outlined">forum</span></div>
+                        <span class="font-light tracking-wide">WhatsApp Us</span>
+                    </a>
+                    <a href="mailto:hello@mytravelguardian.com"
+                        class="flex gap-4 items-center text-white/80 hover:text-accent transition-colors">
+                        <div class="size-10 rounded-full bg-white/10 flex items-center justify-center"><span
+                                class="material-symbols-outlined">mail</span></div>
+                        <span class="font-light tracking-wide">hello@mytravelguardian.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FORM -->
+        <div class="lg:col-span-3">
+            <div
+                class="bg-white rounded-3xl shadow-soft-xl border border-secondary/5 p-8 md:p-12 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-[100px] -z-0 pointer-events-none">
+                </div>
+
+                <h2 class="text-3xl font-serif text-secondary mb-2 relative z-10">Craft Your Adventure</h2>
+                <p class="text-secondary/50 text-sm mb-8 font-light tracking-wide relative z-10">Submit details below to
+                    instantly connect with us on WhatsApp.</p>
+
+                <form id="trip-form" class="space-y-12 relative z-10" onsubmit="submitFormToWhatsApp(event)">
+
+                    <!-- Section 1: About You -->
+                    <div>
+                        <h3
+                            class="text-sm font-bold text-primary uppercase tracking-widest mb-6 flex items-center gap-3">
+                            <span class="size-6 rounded-full bg-primary/10 flex items-center justify-center">1</span>
+                            About You
+                        </h3>
+                        <div
+                            class="grid md:grid-cols-2 gap-6 bg-background-light/30 p-6 rounded-2xl border border-secondary/5">
+                            <div class="float-label-wrap group">
+                                <input type="text" id="fname" placeholder=" " required
+                                    class="group-hover:border-primary/50 transition-colors bg-white/50" />
+                                <label for="fname" class="group-hover:text-primary transition-colors">First Name
+                                    *</label>
+                            </div>
+                            <div class="float-label-wrap group">
+                                <input type="text" id="lname" placeholder=" " required
+                                    class="group-hover:border-primary/50 transition-colors bg-white/50" />
+                                <label for="lname" class="group-hover:text-primary transition-colors">Last Name
+                                    *</label>
+                            </div>
+                            <div class="float-label-wrap group">
+                                <input type="email" id="email" placeholder=" " required
+                                    class="group-hover:border-primary/50 transition-colors bg-white/50" />
+                                <label for="email" class="group-hover:text-primary transition-colors">Email Address
+                                    *</label>
+                            </div>
+                            <div class="float-label-wrap group">
+                                <input type="tel" id="phone" placeholder=" " required
+                                    class="group-hover:border-primary/50 transition-colors bg-white/50" />
+                                <label for="phone" class="group-hover:text-primary transition-colors">WhatsApp Number
+                                    *</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 2: Your Journey -->
+                    <div>
+                        <h3
+                            class="text-sm font-bold text-primary uppercase tracking-widest mb-6 flex items-center gap-3">
+                            <span class="size-6 rounded-full bg-primary/10 flex items-center justify-center">2</span>
+                            Your Journey
+                        </h3>
+                        <div class="space-y-6 bg-background-light/30 p-6 rounded-2xl border border-secondary/5">
+                            <div class="float-label-wrap group">
+                                <input type="text" id="destination" placeholder=" " required
+                                    class="group-hover:border-primary/50 transition-colors bg-white/50 text-lg font-medium" />
+                                <label for="destination"
+                                    class="group-hover:text-primary transition-colors text-base">Dream Destination
+                                    *</label>
+                            </div>
+
+                            <div
+                                class="grid md:grid-cols-2 gap-6 border border-secondary/10 p-5 rounded-xl relative bg-white/40">
+                                <span
+                                    class="absolute -top-3 left-4 bg-white px-3 py-1 rounded-full text-xs font-bold tracking-widest text-secondary/40 uppercase shadow-sm border border-secondary/5">Travel
+                                    Window</span>
+                                <div class="float-label-wrap !border-none mt-2">
+                                    <input type="date" id="travel-from" placeholder=" "
+                                        class="!bg-transparent !border-b !border-0 !border-secondary/20 !rounded-none focus:!border-primary !px-0" />
+                                    <label for="travel-from" class="!left-0 !top-0 text-xs">Start Date</label>
+                                </div>
+                                <div class="float-label-wrap !border-none mt-2">
+                                    <input type="date" id="travel-to" placeholder=" "
+                                        class="!bg-transparent !border-b !border-0 !border-secondary/20 !rounded-none focus:!border-primary !px-0" />
+                                    <label for="travel-to" class="!left-0 !top-0 text-xs">End Date</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 3: Experience Details -->
+                    <div>
+                        <h3
+                            class="text-sm font-bold text-primary uppercase tracking-widest mb-6 flex items-center gap-3">
+                            <span class="size-6 rounded-full bg-primary/10 flex items-center justify-center">3</span>
+                            Experience Details
+                        </h3>
+                        <div class="space-y-6 bg-background-light/30 p-6 rounded-2xl border border-secondary/5">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="float-label-wrap group">
+                                    <select id="travelers"
+                                        class="appearance-none group-hover:border-primary/50 transition-colors bg-white/50">
+                                        <option value="">Select travellers</option>
+                                        <option>Solo Expedition</option>
+                                        <option>Couple's Retreat</option>
+                                        <option>Family Journey (3-5)</option>
+                                        <option>Group Adventure (6+)</option>
+                                    </select>
+                                    <label for="travelers"
+                                        class="group-hover:text-primary transition-colors">Travellers</label>
+                                    <span
+                                        class="material-symbols-outlined absolute right-4 top-4 text-secondary/40 pointer-events-none">expand_content</span>
+                                </div>
+                                <div class="float-label-wrap group">
+                                    <select id="budget"
+                                        class="appearance-none group-hover:border-primary/50 transition-colors bg-white/50">
+                                        <option value="">Select budget range</option>
+                                        <option>Premium (₹1L - ₹3L)</option>
+                                        <option>Luxury (₹3L - ₹7L)</option>
+                                        <option>Ultra Luxury (₹7L+)</option>
+                                        <option>International (Custom)</option>
+                                    </select>
+                                    <label for="budget" class="group-hover:text-primary transition-colors">Per Person
+                                        Budget</label>
+                                    <span
+                                        class="material-symbols-outlined absolute right-4 top-4 text-secondary/40 pointer-events-none">expand_content</span>
+                                </div>
+                            </div>
+
+                            <div class="float-label-wrap group">
+                                <textarea id="message" rows="4" placeholder=" "
+                                    class="group-hover:border-primary/50 transition-colors resize-none bg-white/50"></textarea>
+                                <label for="message" class="group-hover:text-primary transition-colors">Special
+                                    requests,
+                                    celebrations, or specific vibes you're looking for...</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="submit-btn"
+                        class="btn ripple-btn w-full bg-secondary text-white py-4 rounded-xl font-medium text-sm tracking-widest uppercase hover:bg-primary transition-colors duration-500 shadow-xl shadow-secondary/10 flex items-center justify-center gap-3 group">
+                        <span id="btn-label">Send to WhatsApp</span>
+                        <span
+                            class="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1 group-hover:-translate-y-1">send</span>
+                    </button>
+                </form>
+
+                <!-- SUCCESS STATE -->
+                <div id="form-success" class="hidden text-center py-16 px-4">
+                    <div class="relative inline-block mb-6">
+                        <div class="size-20 rounded-full bg-green-100 flex items-center justify-center relative z-10">
+                            <span class="material-symbols-outlined text-4xl text-green-600">forum</span>
+                        </div>
+                        <div class="absolute inset-0 bg-green-400 rounded-full animate-ping opacity-20"></div>
+                    </div>
+                    <h3 class="text-3xl font-serif text-secondary mb-4">Redirecting to WhatsApp!</h3>
+                    <p class="text-secondary/60 font-light mb-8 max-w-sm mx-auto leading-relaxed">Please wait while we
+                        open WhatsApp with your customized inquiry message. Send the message to start chatting with your
+                        Guardian.</p>
+                    <button onclick="window.location.reload()"
+                        class="btn text-xs uppercase tracking-widest font-bold text-primary hover:text-secondary border-b border-primary hover:border-secondary pb-1">Start
+                        a new inquiry</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-secondary text-white pt-24 pb-12 relative overflow-hidden">
+        <div
+            class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-secondary via-primary to-secondary opacity-50">
+        </div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+                <div class="flex flex-col gap-6">
+                    <a href="index.html" class="flex items-center">
+                        <img src="logo.png" alt="My Travel Guardian"
+                            class="h-10 w-auto object-contain brightness-0 invert opacity-80" />
+                    </a>
+                    <p class="text-slate-400 text-sm leading-relaxed font-light">
+                        Crafting bespoke journeys for the modern explorer. Rooted in heritage, delivered with global
+                        luxury standards.
+                    </p>
+                    <div class="text-slate-400 text-sm font-light mt-2 space-y-3 border-l-2 border-primary/40 pl-4">
+                        <p class="flex items-start gap-3"><span
+                                class="material-symbols-outlined text-[18px] text-accent mt-0.5">location_on</span>
+                            <span class="leading-relaxed">House no 2, 5, Lane 2, Poddar Colony, Khetrajpur, Sambalpur,
+                                Odisha 768003<br><i class="text-white/40 text-xs">Near Durga Mangalam</i></span>
+                        </p>
+                        <p class="flex items-center gap-3"><span
+                                class="material-symbols-outlined text-[18px] text-accent">schedule</span> <span>Mon -
+                                Sun, 10 AM - 8 PM</span></p>
+                    </div>
+                    <div class="flex gap-4">
+                        <a class="text-white/40 hover:text-primary transition-colors" href="https://facebook.com"
+                            target="_blank"><span class="material-symbols-outlined">public</span></a>
+                        <a class="text-white/40 hover:text-primary transition-colors" href="https://instagram.com"
+                            target="_blank"><span class="material-symbols-outlined">photo_camera</span></a>
+                        <a class="text-white/40 hover:text-primary transition-colors"
+                            href="mailto:hello@mytravelguardian.com"><span
+                                class="material-symbols-outlined">mail</span></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-serif text-lg mb-8 text-accent">Company</h3>
+                    <ul class="space-y-4 text-sm text-slate-400 font-light">
+                        <li><a class="hover:text-white transition-colors" href="about.html">Our Story</a></li>
+                        <li><a class="hover:text-white transition-colors" href="about.html#team">The Team</a></li>
+                        <li><a class="hover:text-white transition-colors" href="about.html">Careers</a></li>
+                        <li><a class="hover:text-white transition-colors" href="about.html">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-serif text-lg mb-8 text-accent">Support</h3>
+                    <ul class="space-y-4 text-sm text-slate-400 font-light">
+                        <li><a class="hover:text-white transition-colors" href="plan-trip.html">Contact Guardian</a>
+                        </li>
+                        <li><a class="hover:text-white transition-colors" href="#">Terms of Service</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-serif text-lg mb-8 text-accent">Newsletter</h3>
+                    <p class="text-slate-400 text-sm mb-6 font-light">Subscribe for heritage stories and travel
+                        inspiration.</p>
+                    <form class="flex flex-col gap-4">
+                        <input
+                            class="bg-white/5 border border-white/10 rounded-none px-4 py-3 text-sm text-white focus:outline-none focus:border-primary transition-colors"
+                            placeholder="Email address" type="email" />
+                        <button
+                            class="btn ripple-btn bg-primary hover:bg-white hover:text-secondary text-white text-sm font-medium py-3 px-6 rounded-none transition-all uppercase tracking-widest"
+                            type="button"
+                            onclick="this.closest('form').dispatchEvent(new Event('submit',{bubbles:true,cancelable:true}))">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-slate-500 text-xs tracking-wide">© 2023 My Travel Guardian. All rights reserved.</p>
+                <div class="flex gap-8 text-xs text-slate-500 uppercase tracking-widest">
+                    <a class="hover:text-white transition-colors" href="#">Privacy</a>
+                    <a class="hover:text-white transition-colors" href="#">Terms</a>
+                    <a class="hover:text-white transition-colors" href="destinations.html">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast"><span class="material-symbols-outlined text-primary text-lg">check_circle</span><span
+            id="toast-msg">Done!</span></div>
+    <script src="app.js"></script>
+    <script>
+        function submitFormToWhatsApp(e) {
+            e.preventDefault();
+
+            // Get form values
+            const fname = document.getElementById('fname').value.trim();
+            const lname = document.getElementById('lname').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const destination = document.getElementById('destination').value.trim();
+
+            // Optional fields
+            const fromDateEl = document.getElementById('travel-from');
+            const toDateEl = document.getElementById('travel-to');
+            const travelersEl = document.getElementById('travelers');
+            const budgetEl = document.getElementById('budget');
+            const msgEl = document.getElementById('message');
+
+            const travelFrom = fromDateEl && fromDateEl.value ? fromDateEl.value : 'Not specified';
+            const travelTo = toDateEl && toDateEl.value ? toDateEl.value : 'Not specified';
+            const travelers = travelersEl && travelersEl.value ? travelersEl.value : 'Not specified';
+            const budget = budgetEl && budgetEl.value ? budgetEl.value : 'Not specified';
+            const message = msgEl && msgEl.value ? msgEl.value.trim() : 'None';
+
+            // Construct Whatsapp message
+            let waMsg = `*New Trip Inquiry: My Travel Guardian* 🌍✨\n\n`;
+            waMsg += `*Traveler:* ${fname} ${lname}\n`;
+            waMsg += `*Email:* ${email}\n`;
+            waMsg += `*Phone:* ${phone}\n`;
+            waMsg += `*Dream Destination:* ${destination}\n\n`;
+
+            waMsg += `*Trip Details*\n`;
+            waMsg += `📅 *Dates:* ${travelFrom} to ${travelTo}\n`;
+            waMsg += `👥 *Travelers:* ${travelers}\n`;
+            waMsg += `💰 *Budget:* ${budget}\n\n`;
+
+            if (message !== 'None') {
+                waMsg += `📝 *Notes/Requests:*\n${message}\n\n`;
+            }
+
+            waMsg += `_Looking forward to planning my adventure!_`;
+
+            // UI Feedback
+            const btn = document.getElementById('submit-btn');
+            const label = document.getElementById('btn-label');
+            btn.disabled = true;
+            label.textContent = 'Redirecting...';
+            btn.classList.add('opacity-80');
+
+            // Show success state
+            document.getElementById('trip-form').classList.add('hidden');
+            document.getElementById('form-success').classList.remove('hidden');
+
+            // Encode and redirect
+            const encodedMsg = encodeURIComponent(waMsg);
+            const waNumber = "919583420885"; // Target number
+            const waUrl = `https://wa.me/${waNumber}?text=${encodedMsg}`;
+
+            // Small delay for UI update before opening new tab
+            setTimeout(() => {
+                window.open(waUrl, '_blank');
+            }, 800);
+        }
+    </script>
+</body>
+
+</html>
