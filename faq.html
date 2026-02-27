@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Inquiries & FAQs – My Travel Guardian</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3E7B78", "secondary": "#1B2430", "accent": "#E6DCCA", "background-light": "#F9F7F2"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["'Playfair Display'", "Georgia", "serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .faq-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .faq-card[open] {
+            background-color: white;
+            box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.05);
+        }
+
+        details>summary {
+            list-style: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light font-display text-secondary/80 leading-relaxed overflow-x-hidden">
+
+    <!-- NAV -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-secondary/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" alt="My Travel Guardian" class="h-24 md:h-28 w-auto object-contain" />
+            </a>
+            <div class="hidden md:flex items-center gap-10">
+                <a class="text-xs font-bold uppercase tracking-widest text-secondary/60 hover:text-primary transition-colors"
+                    href="destinations.html">Destinations</a>
+                <a class="text-xs font-bold uppercase tracking-widest text-secondary/60 hover:text-primary transition-colors"
+                    href="contact-guardian.html">Contact</a>
+            </div>
+            <a href="plan-trip.html"
+                class="bg-primary text-white text-[11px] font-bold uppercase tracking-[0.2em] py-3.5 px-8 rounded-full">Plan
+                My Trip</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="pt-40 pb-24 bg-secondary text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <img src="assets/kerala.png" class="w-full h-full object-cover" alt="Kerala Backwaters">
+        </div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <h1 class="text-5xl md:text-7xl font-serif mb-6 text-accent">Curated Answers.</h1>
+            <p class="text-white/60 text-xl font-light max-w-2xl mx-auto leading-relaxed">
+                Everything you need to know about embarking on a bespoke journey through the heart of India with your
+                dedicated guardians.
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ CONTENT -->
+    <section class="max-w-4xl mx-auto px-6 py-24">
+
+        <div class="space-y-12">
+
+            <!-- CATEGORY: THE EXPERIENCE -->
+            <div>
+                <h2
+                    class="text-[10px] font-black uppercase tracking-[0.5em] text-primary mb-10 pb-4 border-b border-primary/10">
+                    The Experience</h2>
+                <div class="space-y-4">
+                    <details class="faq-card group p-8 rounded-[2rem] border border-secondary/5 cursor-pointer">
+                        <summary class="flex items-center justify-between">
+                            <h3 class="text-xl font-serif text-secondary">What defines a "Bespoke" journey?</h3>
+                            <span
+                                class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <div class="mt-6 text-lg font-light text-secondary/60 leading-relaxed">
+                            A bespoke journey is a unique narrative written exclusively for you. We do not offer set
+                            tours. Instead, we match your interests—whether heritage, architecture, or spiritual
+                            exploration—with private access and artisan-level logistics.
+                        </div>
+                    </details>
+
+                    <details class="faq-card group p-8 rounded-[2rem] border border-secondary/5 cursor-pointer">
+                        <summary class="flex items-center justify-between">
+                            <h3 class="text-xl font-serif text-secondary">How does the "Guardian" system work?</h3>
+                            <span
+                                class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <div class="mt-6 text-lg font-light text-secondary/60 leading-relaxed">
+                            From the moment you arrive in India until your departure, you are assigned a dedicated
+                            liaison. This "Guardian" manages every logistical detail, provides 24/7 security oversight,
+                            and handles any spontaneous requests, ensuring a seamless flow of travel.
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <!-- CATEGORY: LOGISTICS -->
+            <div>
+                <h2
+                    class="text-[10px] font-black uppercase tracking-[0.5em] text-primary mb-10 pb-4 border-b border-primary/10">
+                    Logistics & Safety</h2>
+                <div class="space-y-4">
+                    <details class="faq-card group p-8 rounded-[2rem] border border-secondary/5 cursor-pointer">
+                        <summary class="flex items-center justify-between">
+                            <h3 class="text-xl font-serif text-secondary">Is luxury travel in India safe?</h3>
+                            <span
+                                class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <div class="mt-6 text-lg font-light text-secondary/60 leading-relaxed">
+                            Safety is our primary pillar. Your Guardian system includes private, highly-trained
+                            chauffeurs, vetted heritage hotels, and a security protocol that remains invisible but
+                            ever-present. We handle all complexities so you can focus on the beauty of India.
+                        </div>
+                    </details>
+
+                    <details class="faq-card group p-8 rounded-[2rem] border border-secondary/5 cursor-pointer">
+                        <summary class="flex items-center justify-between">
+                            <h3 class="text-xl font-serif text-secondary">Do you handle internal flights?</h3>
+                            <span
+                                class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <div class="mt-6 text-lg font-light text-secondary/60 leading-relaxed">
+                            Yes. While most of our guests arrive via international flight, we manage all domestic
+                            logistical segments, including private charters and luxury rail bookings where available, as
+                            part of your comprehensive stewardship agreement.
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-32 p-16 rounded-[4rem] bg-accent/30 text-center">
+            <h3 class="text-3xl font-serif text-secondary mb-6">Still Have Questions?</h3>
+            <p class="text-secondary/50 font-light mb-10 max-w-lg mx-auto leading-relaxed">
+                If your inquiry is more specialized, our lead concierges are standing by to provide clarity.
+            </p>
+            <a href="contact-guardian.html"
+                class="inline-flex items-center gap-6 bg-secondary text-white py-5 px-12 rounded-full font-bold uppercase tracking-[0.2em] text-xs hover:bg-primary transition-all">
+                Direct Inquiry <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+        </div>
+
+    </section>
+
+    <footer class="py-12 text-center text-secondary/20 text-[10px] font-bold uppercase tracking-[0.4em]">
+        Stewardship of Excellence &copy; 2026 My Travel Guardian
+    </footer>
+
+</body>
+
+</html>

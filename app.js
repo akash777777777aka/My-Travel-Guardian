@@ -130,16 +130,77 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!destInput || !destList) return;
 
   const destinations = [
+    // Existing non-India / Existing India
     { name: 'Sambalpur, Odisha', category: 'Heritage' },
     { name: 'Puri, Odisha', category: 'Spiritual' },
-    { name: 'Kyoto, Japan', category: 'Culture' },
-    { name: 'Marrakech, Morocco', category: 'Adventure' },
-    { name: 'Florence, Italy', category: 'Art & History' },
-    { name: 'Bali, Indonesia', category: 'Nature' },
-    { name: 'Amalfi Coast, Italy', category: 'Luxury' },
-    { name: 'Santorini, Greece', category: 'Luxury' },
-    { name: 'Petra, Jordan', category: 'Heritage' },
-    { name: 'Machu Picchu, Peru', category: 'Adventure' }
+    { name: 'Taj Mahal, Agra', category: 'Heritage' },
+    { name: 'Kerala Backwaters', category: 'Nature' },
+    { name: 'Jaipur Palaces', category: 'Culture' },
+    { name: 'Ladakh, Himalayas', category: 'Adventure' },
+    { name: 'Varanasi', category: 'Spiritual' },
+
+    // North India
+    { name: 'New Delhi', category: 'Heritage & Culture' },
+    { name: 'Agra, Uttar Pradesh', category: 'Heritage' },
+    { name: 'Jaipur, Rajasthan', category: 'Culture' },
+    { name: 'Udaipur, Rajasthan', category: 'Luxury & Heritage' },
+    { name: 'Jodhpur, Rajasthan', category: 'Heritage' },
+    { name: 'Jaisalmer, Rajasthan', category: 'Adventure & Heritage' },
+    { name: 'Rishikesh, Uttarakhand', category: 'Spiritual & Adventure' },
+    { name: 'Haridwar, Uttarakhand', category: 'Spiritual' },
+    { name: 'Amritsar, Punjab', category: 'Spiritual & Culture' },
+    { name: 'Shimla, Himachal Pradesh', category: 'Nature' },
+    { name: 'Manali, Himachal Pradesh', category: 'Adventure & Nature' },
+    { name: 'Dharamshala, Himachal Pradesh', category: 'Culture & Nature' },
+    { name: 'Leh Ladakh', category: 'Adventure' },
+    { name: 'Srinagar, Jammu & Kashmir', category: 'Nature' },
+    { name: 'Gulmarg, Jammu & Kashmir', category: 'Adventure & Nature' },
+
+    // South India
+    { name: 'Munnar, Kerala', category: 'Nature' },
+    { name: 'Kochi, Kerala', category: 'Heritage' },
+    { name: 'Thiruvananthapuram, Kerala', category: 'Culture' },
+    { name: 'Bengaluru, Karnataka', category: 'City & Culture' },
+    { name: 'Mysuru, Karnataka', category: 'Heritage' },
+    { name: 'Hampi, Karnataka', category: 'Heritage' },
+    { name: 'Coorg, Karnataka', category: 'Nature' },
+    { name: 'Chennai, Tamil Nadu', category: 'Culture' },
+    { name: 'Mahabalipuram, Tamil Nadu', category: 'Heritage' },
+    { name: 'Ooty, Tamil Nadu', category: 'Nature' },
+    { name: 'Kodaikanal, Tamil Nadu', category: 'Nature' },
+    { name: 'Madurai, Tamil Nadu', category: 'Spiritual' },
+    { name: 'Hyderabad, Telangana', category: 'Heritage & Food' },
+    { name: 'Andaman & Nicobar Islands', category: 'Beach & Adventure' },
+    { name: 'Lakshadweep Islands', category: 'Beach & Luxury' },
+
+    // West & Central India
+    { name: 'Mumbai, Maharashtra', category: 'City & Culture' },
+    { name: 'Pune, Maharashtra', category: 'Culture' },
+    { name: 'Mahabaleshwar, Maharashtra', category: 'Nature' },
+    { name: 'Goa', category: 'Beach & Nightlife' },
+    { name: 'Ahmedabad, Gujarat', category: 'Heritage' },
+    { name: 'Rann of Kutch, Gujarat', category: 'Culture & Nature' },
+    { name: 'Gir National Park, Gujarat', category: 'Wildlife' },
+    { name: 'Bhopal, Madhya Pradesh', category: 'Heritage' },
+    { name: 'Indore, Madhya Pradesh', category: 'Culture & Food' },
+    { name: 'Khajuraho, Madhya Pradesh', category: 'Heritage' },
+    { name: 'Kanha National Park, Madhya Pradesh', category: 'Wildlife' },
+    { name: 'Bandhavgarh, Madhya Pradesh', category: 'Wildlife' },
+
+    // East & North East India
+    // East & North East India
+    { name: 'Kolkata, West Bengal', category: 'Heritage & Culture' },
+    { name: 'Darjeeling, West Bengal', category: 'Nature' },
+    { name: 'Sundarbans, West Bengal', category: 'Wildlife' },
+    { name: 'Bhubaneswar, Odisha', category: 'Spiritual' },
+    { name: 'Konark, Odisha', category: 'Heritage' },
+    { name: 'Chilika Lake, Odisha', category: 'Nature' },
+    { name: 'Guwahati, Assam', category: 'Culture' },
+    { name: 'Kaziranga National Park, Assam', category: 'Wildlife' },
+    { name: 'Shillong, Meghalaya', category: 'Nature' },
+    { name: 'Cherrapunji, Meghalaya', category: 'Nature' },
+    { name: 'Gangtok, Sikkim', category: 'Nature & Culture' },
+    { name: 'Tawang, Arunachal Pradesh', category: 'Culture' }
   ];
 
   function renderList(query) {

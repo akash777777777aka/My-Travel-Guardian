@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Contact Your Guardian – My Travel Guardian</title>
+    <meta name="description"
+        content="Connect with our luxury travel concierges for a bespoke journey across India. Your personal guardian is just a message away." />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3E7B78", "secondary": "#1B2430", "accent": "#E6DCCA", "background-light": "#F9F7F2", "background-dark": "#111820"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["'Playfair Display'", "Georgia", "serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(27, 36, 48, 0.4), rgba(249, 247, 242, 1));
+        }
+
+        @keyframes pageIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-page-in {
+            animation: pageIn 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light font-display text-secondary overflow-x-hidden">
+
+    <!-- NAV -->
+    <nav
+        class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-white/80 backdrop-blur-md border-b border-secondary/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" alt="My Travel Guardian" class="h-24 md:h-28 w-auto object-contain" />
+            </a>
+            <div class="hidden md:flex items-center gap-10">
+                <a class="text-xs font-bold uppercase tracking-widest text-secondary/60 hover:text-primary transition-colors"
+                    href="destinations.html">Destinations</a>
+                <a class="text-xs font-bold uppercase tracking-widest text-secondary/60 hover:text-primary transition-colors"
+                    href="heritage.html">Heritage</a>
+                <a class="text-xs font-bold uppercase tracking-widest text-secondary/60 hover:text-primary transition-colors"
+                    href="journal.html">Journal</a>
+                <a class="text-xs font-bold uppercase tracking-widest text-primary"
+                    href="contact-guardian.html">Contact</a>
+            </div>
+            <a href="plan-trip.html"
+                class="bg-primary text-white text-[11px] font-bold uppercase tracking-[0.2em] py-3.5 px-8 rounded-full shadow-lg shadow-primary/20 hover:scale-105 transition-transform">Plan
+                Journey</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="relative pt-32 pb-48 overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="assets/contact_hero.png" class="w-full h-full object-cover" alt="Luxury Lobby" />
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 text-center animate-page-in">
+            <span
+                class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-[0.3em] mb-6">Concierge
+                Access</span>
+            <h1 class="text-6xl md:text-8xl font-serif text-secondary mb-8 leading-tight">Your Journey,<br />Our
+                Stewardship.</h1>
+            <p class="text-secondary/70 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
+                Connect with our master guardians to unlock the unexplored corners of India. Excellence is not a
+                service, but our heritage.
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTACT GRID -->
+    <section class="max-w-7xl mx-auto px-6 -mt-32 relative z-20 pb-24">
+        <div class="grid lg:grid-cols-12 gap-8">
+            <!-- INFO CARDS -->
+            <div class="lg:col-span-5 space-y-8 animate-page-in" style="animation-delay: 0.2s;">
+                <div class="glass-panel rounded-[2rem] p-10 shadow-soft">
+                    <div class="flex items-center gap-6 mb-8">
+                        <div
+                            class="size-14 rounded-2xl bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/20">
+                            <span class="material-symbols-outlined">support_agent</span>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-2xl text-secondary">Private Concierge</h3>
+                            <p class="text-sm text-secondary/50">Available 24/7 for travelers</p>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="group flex items-center gap-5 p-4 rounded-2xl hover:bg-white transition-colors">
+                            <span class="material-symbols-outlined text-primary">call</span>
+                            <a href="tel:+919583420885" class="text-lg font-light tracking-wide">+91 95834 20885</a>
+                        </div>
+                        <div class="group flex items-center gap-5 p-4 rounded-2xl hover:bg-white transition-colors">
+                            <span class="material-symbols-outlined text-primary">mail</span>
+                            <a href="mailto:hello@mytravelguardian.com"
+                                class="text-lg font-light tracking-wide">concierge@mytravelguardian.com</a>
+                        </div>
+                        <div
+                            class="group flex items-center gap-5 p-4 rounded-2xl bg-primary text-white shadow-xl shadow-primary/10">
+                            <span class="material-symbols-outlined">forum</span>
+                            <a href="https://wa.me/919583420885" target="_blank"
+                                class="text-lg font-medium tracking-wide">WhatsApp Guardian</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel rounded-[2rem] p-10 shadow-soft">
+                    <h3 class="font-serif text-2xl text-secondary mb-6">Heritage Office</h3>
+                    <p class="text-secondary/60 font-light leading-relaxed mb-8">
+                        House no 2, 5, Lane 2, Poddar Colony,<br />
+                        Khetrajpur, Sambalpur,<br />
+                        Odisha, 768003
+                    </p>
+                    <div
+                        class="relative h-48 rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
+                        <img src="assets/odisha.png" class="w-full h-full object-cover" alt="Odisha Heritage">
+                    </div>
+                </div>
+            </div>
+
+            <!-- FORM PANEL -->
+            <div class="lg:col-span-7 glass-panel rounded-[2rem] p-12 md:p-16 shadow-soft animate-page-in"
+                style="animation-delay: 0.4s;">
+                <h2 class="text-4xl font-serif text-secondary mb-4">Start Your Story</h2>
+                <p class="text-secondary/50 font-light mb-12">Submit your details and a dedicated guardian will contact
+                    you within 4 hours.</p>
+
+                <form class="space-y-8" onsubmit="event.preventDefault(); alert('Message sent to our concierge.');">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="space-y-2">
+                            <label class="text-[10px] font-bold uppercase tracking-widest text-secondary/40 ml-4">Full
+                                Name</label>
+                            <input type="text" placeholder="e.g. Maharajah Singh"
+                                class="w-full bg-white/50 border border-secondary/5 rounded-2xl px-6 py-4 focus:outline-none focus:border-primary transition-colors"
+                                required>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[10px] font-bold uppercase tracking-widest text-secondary/40 ml-4">Email
+                                Address</label>
+                            <input type="email" placeholder="e.g. singh@heritage.com"
+                                class="w-full bg-white/50 border border-secondary/5 rounded-2xl px-6 py-4 focus:outline-none focus:border-primary transition-colors"
+                                required>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-[10px] font-bold uppercase tracking-widest text-secondary/40 ml-4">Bespoke
+                            Inquiry</label>
+                        <textarea rows="5" placeholder="Tell us about the dream journey you wish to embark upon..."
+                            class="w-full bg-white/50 border border-secondary/5 rounded-2xl px-6 py-4 focus:outline-none focus:border-primary transition-colors resize-none"
+                            required></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-secondary text-white py-5 rounded-2xl font-bold uppercase tracking-[0.2em] text-xs hover:bg-primary hover:shadow-2xl transition-all duration-500">
+                        Secure My Consultation
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (Simple) -->
+    <footer
+        class="py-12 text-center text-secondary/30 text-[10px] font-bold uppercase tracking-[0.3em] border-t border-secondary/5">
+        &copy; 2024 My Travel Guardian. Built on Heritage.
+    </footer>
+
+</body>
+
+</html>
